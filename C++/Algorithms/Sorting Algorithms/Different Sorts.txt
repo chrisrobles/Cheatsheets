@@ -1,0 +1,75 @@
+External sorting
+When the data to be sorted is so large that we cannot use the computer's internal storage (main memory) to store it.
+Use secondary storage devices to store the data
+
+Comparison Sort
+Compare elements at each step of the algorithm to determine if one element should be to the left or right of another element
+Cannot be faster than:
+Ω(nlogn)
+
+Integer Sort
+For each element x how many elements are less than x and place it above all those (index) to place it into the correct slot immediately.
+
+
+Stability
+is stable if it preserves the original order of elements with equal key values
+basically if there is duplicate data it will keep it left to right
+
+-----Comparison Based Sorts-----
+-Merge Sort (larger or more unordered)
+focuses on how to merge together two pre-sorted arrays such that the resulting array is also sorted.
+Basically, compares the beginning index (smallest number) of each array and places it in the merged array until the are combined
+Time Complexity = O(nlogn) regardles of the state of the input
+Space Complexity = O(n)
+Pros: time-efficient, used for external sorting, highly parallelizable, stable
+Cons: slower than quicksort, not as space efficient 
+
+-Insertion Sort (list already mostly sorted, smaller list)
+builds a final sorted array one element at a time. 
+It iterates through an input array and removes one element per iteration, 
+finds the place the element belongs in the array, and then places it there.
+Basically, moves left to right placing the element it is on in the right place.
+Time Complexity= worst & average (O(n^2)) best (O(n)) 
+Space Complexity = O(1) (because sorted in pace and no extra space is needed)
+
+-Bubble Sort (don't use this one)
+Compares each pair of elements in an array and swaps them if they are out of order until the entire array is sorted. 
+For each element in the list, the algorithm compares every pair of elements.
+Time Complexity = worst (O(n^2))
+Space Complexity = O(1)
+
+-Quick Sort
+Uses divide-and-conquer to sort an array. 
+The algorithm picks a pivot element, A[q]A[q], and then rearranges the array into two subarrays A[p \dots q-1]A[p…q−1], 
+such that all elements are less than A[q]A[q], and A[q+1 \dots r]A[q+1…r], such that all elements are greater than or equal to A[q]A[q].
+Time Complexity = best (O(nlogn)) worst (O(n^2)) average (O(nlogn))
+Space Complexity = best (O(logn)) average (O(n))
+Pros: faster than merge sort
+Cons: unstable so worse space complexity
+
+-Heapsort
+Uses a binary heap data structure (max-heap: root is largest value)to sort elements. 
+It divides its input into a sorted and an unsorted region, and 
+it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region.
+Time Complexity = O(nlogn)
+Space Copmlexity = O(1) (because it is sorted in place)
+Pros: time-efficient, less memory usage, consistent performance
+Cons: unstable sort, external sorting not possible 
+
+
+-----Integer Based Sorts-----
+-Counting Sort
+Assumes that each of the n input elements in a list has a key value ranging from 0 to k, for some integer k. 
+For each element in the list, counting sort determines the number of elements that are less than it. 
+Counting sort can use this information to place the element directly into the correct slot of the output array.
+Time Complexity: O(k + n)
+Space Complexity: O(k +n)
+Efficient if the the range of input data k, is not signficantly greater tahn the number of objects to be sorted, n
+Bascially, efficient if the list is not completely unsorted
+
+
+-----CHOOSING-----
+Algorithm, best case, worst cases, average case, space complexity, stable
+Merge Sort, O(nlogn), O(nlogn), O(nlogn), O(n), Yes
+
+See Microsoft Word Document for table of algorithms

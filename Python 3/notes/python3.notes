@@ -1,0 +1,1173 @@
+!EVERYTHING IS OBJECTS
+
+#style guide
+https://pep8.org/
+
+#line by line execution
+http://pythontutor.com/visualize.html#mode=edit
+
+#online ide
+https://www.online-python.com
+
+<===================STARTING POINT===================>
+[py]
+    def main():  # defined starting point, allows to import and run program in another script
+        print("hello world")
+    
+    if __name__ == '__main__':  # only runs if program ran independently
+        main()
+[end]
+<===================COMMENT===================>
+Comments:
+    [python]
+    # comment
+    """
+    multi
+    line
+    comment
+    """
+    [end]
+
+<===================PRINT===================>
+Print:
+    [python]
+    # Spaces
+    print('Hello, World!')
+    print('Hello,', 'World!')
+    print('Hello', end=', '); print('World!')  # end parameter default = '\n' (new line)
+
+    # Line breaks
+    print('Hello,')
+    print('World!')
+
+    print('Hello,') ; print('World!')
+
+    # Multiline strings
+    print('''
+    Hello,
+    World!
+    ''')
+
+    # Variables
+    name = "World"
+    print(f'Hello, {name}!')
+    print('Hello, {}!'.format(name))
+    print('Hello, {person}!'.format(person=name))
+
+    # Raw string
+    print(r'Hello \t World \n !')  # Hello \t World \n !
+    [end]
+
+
+Print nums/vars with string:
+        print(f'Very nice to meet you, {name.upper()}')
+        #OR
+        print('Very nice to meet you, {}'.format(name))
+        #OR
+        print('Very nice to meet you, {name}'.format(name=name))
+Printing to Debug:
+    - Use logpoints intead
+        - Prints to the console and doesnt stop program
+<===================DATA TYPES===================>
+Bool:
+    bool(value) will return *True* unless value is:
+    - empty (container)
+    - 0
+    - None
+    - False
+Iterable:
+    - (string, list, tuple, ...)
+    - ![1685867722337](image/python3/1685867722337.png)
+    - [ ] Go through chat gpt prompt
+None / Null:
+    spam
+    spam == None #True
+Swap:
+    a,b = b,a
+Get Address:
+    id(a)
+Unused variables:
+    _ = 5
+    first, _, last = ["first", "get rid of", "last"]  # will get rid of "get rid of"
+<===================ARITHMETIC OPERATORS===================>
+Math Operators:
+    [python]
+    ** #Exponent
+    % #Modulus
+    // #Floor division
+    /
+    *
+    -
+    +
+    [end]
+
+<===================LOGICAL OPERATORS===================>
+Logical Operators:
+    [python]
+    and
+    or
+    not
+    is not None
+    [end]
+    - Ternary Operator:
+        [on_true] if [expression] else [on_false] 
+
+<===================SPECIAL OPERATORS===================>
+Special Operators:
+    - is:
+        - is two variables the same object in memory
+        - if comparing two lists, then compares by reference
+    - in: 
+        - value is in iterable (string, list, tuple, ...) 
+        - if used in condition, returns bool
+        - can check for a list inside a list
+    - yield:
+        [python]
+        for iterator in iterable[1:]:
+            yield joiner
+            yield from iterable
+        [end]
+        - yield will return only when __next__() called on object
+    - *: unpacking operator
+        !when: variable assignment, argument
+        - mybox = ['cables', 'headphones', 'USB']
+          item1, item2, item3 = mybox  # this forms the basis for what the unpacking operator does 
+        - assigns an iterable of values to a sequence of variables
+        - examples)
+            print(*arr) #Output: 1 2 3 INSTEAD OF [1, 2, 3]
+             *string, = 'PythonIsTheBest'
+            first, *middle, last = [1, 2, 3, 5, 7]
+    - *: packing operator
+        !when: parameter
+        - collect several values in a single variable
+        - packs into *tuple*
+    - **: unpacking operator for dictionaries
+        - can use inside callables and other dictionaries
+        merged_dict = {**food, **colors}
+
+<===================CONDITIONS===================>
+Condition Statements:
+    - ! -1 is not a false statement
+    - if statement:
+        [py]
+        if condition :
+            code
+        elif condition :
+            code
+        else :
+            code
+        [end]
+    - if expression:
+        [on_true] if [expression] else [on_false] 
+    - switch: (!!!Python 3.10 or higher !!!)
+        https://docs.python.org/3.10/whatsnew/3.10.html#pep-634-structural-pattern-matching
+        [py]
+        match subject:
+            case <pattern_1>:
+                <action_1>:
+            case <pattern_2>:
+                <action_2>:
+            case <pattern_3>:
+                <action_3>:
+            case _:
+                <action_default>
+        [end]
+
+<===================STRINGS===================>
+Strings:
+    - Concat:
+        'Alice' + 'Bob'
+
+    - Multiple:
+        'Alice' * 5
+
+    - Length:
+        len(myStr)
+
+    - type cast:
+        myint = int(myStr)
+        str(myInt)  # used for end user / goal to be readable
+        repr(myInt)  # used for debugging / goal to be unambiguous / will be wrapped in ' '
+        float(myStr)
+    - case manipulation:
+        myStr.lower()
+        myStr.upper()
+        myStr.upper().lower()
+        myStr.isupper() #has no lowercase and at least one upper
+        myStr.islower() #has no uppercase and at least one lower
+
+    - isX:
+        isalpha() = if the strings consists !only of letters! and is not blank
+        isalnum() = if the string consists !only of letters and numbers! and is not blank
+        isdecimal() = if the string consists !only of numeric characters! and is not blank
+        isspace() = if the string consists !only of spaces, tabs, and new lines! and is not blank
+        istitle() = if the string consists only of words that !begin with an uppercase letter followed by only lowercase!
+
+    - startswith/endswith:
+        'Hello world'.startswith('Hello') #returns true
+
+    - substring:
+        "string"[0:2]  # st
+    - string -> list of Words:
+        "Hello, World".split()  # ["Hello,", "World"] (default = by space)
+        "Hello, World".split(", ")  #["Hello", "World"]
+    - string -> list of Chars:
+        list('Hello') => ['H','e','l','l','o']
+
+    - escape characters:
+        \'
+        \"
+        \t = tab
+        \n = newline
+        \\
+
+    - removing whitespace:
+        myStr.strip() #return a new string without any whitesapce characters at the beginning or end
+        myStr.lstrip()
+        myStr.rstrip()
+
+    - rjust/ljust/center:
+        #move text right, left, or center
+        [python]
+        txt = "hello"
+        x = txt.rjust(20)
+        print(x,"world")
+        [end]
+
+<===================LOOPS===================>
+Range function:
+    - range(start num, up to num, increment by num)
+        [py]
+        range(5) #0,1,2,3,4
+        range(12,16) #12,13,14,15
+        range(0,10,2) #0,2,4,8
+        [end]
+Loop Statements:
+    - break = break Loop
+    - continue = jump back to start of loop
+    - pass = does nothing just keeps going forward like normal
+    - while:
+        [python]
+        while condition :
+            code
+        [end]
+    - do while:
+        [python]
+        while True:
+            print(i)
+            i = i + 1
+            if i > 3:
+                break
+        [end]
+    - for:
+        [python]
+        #for
+        for i in range(5): # 0->4 (5 not included)
+            print('Jimmy Five Times ' + str(i))
+
+        #foreach
+        for n in numbers:
+            print(n)
+        [end]
+
+<===================BUILT IN CONTAINERS===================>
+Built in containers:
+    - empty containers == false
+Lists / arrays:
+    - Passes by !reference! when copied and when used as an argument (passed to function)
+    - Size is dynamic (just add to it)
+    [python]
+    example = [['hello', 'world'], 3.1415, True, None, 'last']
+    [end]
+    - Index:
+        - slice: [n:m]
+        ""
+            [ 0, 1, 2, 3,   -1 ]
+             |  |  |  |   |    |
+             0  1  2  3 4/-1  5
+        ""
+        [python]
+        example[0] #['hello', 'world']
+        example[-1] #'last'
+        example[1:3] #[3.1415, True] SLICE
+        example[1:-1] #[3.1415, True, None] SLICE to 1 before end
+        #SLICE TO END
+        example[1:] #[3.1415, True, None, 'last']
+        #SLICE FROM BEGINNING
+        example[:2] #[['hello', 'world'], 3.1415]
+        example[0:2] #^SAME SHIT
+        [end]
+
+    
+    - Find:
+        example.index('abc')
+    - Find Number of Occurences:
+        example.count('abc')  # of times 'abc' occurs in list
+     - Find Index:
+        example.index('last') # returns 4
+
+    - Print:
+        print(' '.join(map(str, arr)))
+        *OR*
+        print(*arr)
+    - Length:
+        len(examples) #5
+
+    - Concat:
+        list3 = list1 + list2
+        list1 += list2
+        list1.append('after the last at the endx')
+        #concat per element (separated)
+        list1.extend(list2)
+        #string per char
+        list1.extend('chris') [...,'c','h','r','i','s']
+    - Insert:
+        #value
+        list1.insert(-1, 'before last') !O(n) operation INEFFICIENT
+    - Replace:
+        #list (all values in slice range replaced)
+        list1[1:1] = ['hello', 'world']
+        list1[1:2] = ['Hello,', 'World']
+
+    - Delete by index:
+        del example[0]  # can also delete variables
+        example.pop()  # last item
+        example.pop(0)  # first item
+        - !pop returns value deleted, del doesnt
+    - Remove by value:
+        example.remove('hello')
+        - !throws ValueError if value not found
+    - Dynamic Input:
+        [python]
+        catNames = []
+        while True:
+            name = input()
+            catNames = catNames + [name]
+        [end]
+
+    - In/Not In:
+        'chris' in ['hello', 'world'] #false
+        'chris' not in ['hello', 'world'] #true
+    - In/Not In w/ error throwing:
+        assert 'chris' in ['hello','world'] #assertion error thrown
+        assert 'chris' not in ['hello','world'] #nothing returned
+    - Is/Not Is:
+        ['Hello'] is ['Hello'] #false
+        myList1 = myList2
+        myList1 is myList2 #true, because copy by reference
+
+    - Multiple Assignment:
+        [python]
+        cat = ['fat', 'orange']
+        size = cat[0]
+        color = cat[1]
+        #SAME AS
+        size, color = cat
+        #Use to swap variables
+        a, b = 'Hello', 'World'
+        a, b = b, a
+        [end]
+
+    - Sort:
+        spam.sort()
+        ! cant use on lists with different types
+        - Alphabetical:
+            spam.sort(key=str.lower)
+                - sort by letters instead of by ascii (where capitals sorted first)
+        - Reverse / DESC:
+            spam.sort(reverse=True)
+
+    - Copy by Value:
+        - shallow: 1D list
+        - deep: 2D list
+        - !if the list has a list inside use deepcopy
+        - python 3: foo = bar.copy()
+        [py]
+        import copy
+        spam = [...]
+        cheese = copy.copy(spam)
+        cheese = copy.deepcopy(spam)
+        [end]
+        #OR FASTEST SHALLOW (w/o DEEP)
+        cheese = spam[:]
+        #OR FASTEST w/ DEEP
+        cheese = []
+        cheese.extend(spam)
+        //will not keep structure of embedded lists
+    - Copy by Reference:
+        a = b
+
+    - List -> String:
+        ', '.join(myCat) #string of list vals joined by ,
+    - String -> List:
+        text.split('\n') #list of entries divided at every \n
+    - List Comprehension:
+        *List expression*
+        - Shorthand for
+            [py]
+            for x in fruits:
+                if "a" in x:
+                    newlist.append(x**2)
+            [end]
+        <==TO==>
+            [py]
+            newlist = [x**2 for x in fruits if "a" in x]
+            [end]
+        - formula:
+            [ (expression_on_item) for (item) in (iterable) if (true_condition)]
+            - expression_on_item can have condition on how to manipulate item
+    - Map / apply function to each element in list:
+        map(func, list) 
+        - returns map object with results
+        - turn into list: list(map(...))
+    - Filter / test function to each element in list:
+        filter(func, list)
+        - returns filter object with elements that returned true from applying func to
+        - turn into list: list(filter(...))
+    - Reduce / combine function to each pair of elements in list and return one value:
+        from functools import reduce
+        reduce(func, list)
+        multiply=reduce(lambda a,b:a*b,seq)
+Tuples / const arrays:
+    eggs = ('hello', 42, 0.5)
+    eggs[0]
+    - immutable collection (immutable = unchangeable)
+        - can not add or remove
+    - more memory efficient than lists
+    - slight higher time efficiency than lists
+    - Convert:
+        tuple(['cat', 'dog', 45])
+        list(('cat', 'dog', 5))
+        tuple('hello') #('h','e','l','l','o')
+    - store one value:
+        FILES = ('setup.cfg',)
+    - max:
+        - if int, max int
+        - if string, string at max index
+        - requires all values to be same data type
+    - min:
+    - define inline:
+        - string,
+        - assign iterable: *var, = ..iterable..
+Sets / hash table:
+    thisSet = {"apple", "banana", "cherry"}
+    - random order
+    - no duplicates
+    - uneditable
+    - can add and remove still
+        .add()
+        .remove()
+    - only primitive data types can be stored or other sets appended
+    - define empty set: x = set()
+    - in ? : x in mySet  # returns True
+    - update():
+        updates a *current* set
+    - union():
+        returns a *new* set
+Dictionaries / associative arrays:
+    - !no duplicate keys
+    - ! order doesnt matter for determining equality
+    - V3.7 > dicts are ordered
+    - V3.6 < unordered
+    myCat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+    print(myCat['size']) # 'fat'
+
+    - .keys() #tuple of k returned
+    - .values() #tuple of v returned
+    - .items() #tuple of k & v returned
+    - Foreach loop:
+        for k, v in spam.items():
+            print('Key: ' + k + ' Value: ' + str(v))
+    - In ?:
+        'color' in myCat.keys() #True
+        'gray' in myCat.values() #True
+    - Key In ? w/ no return:
+        assert 1 in {1: 'foo'} #returns nothing
+        assert 'foo' in {1: 'foo'} #assertion error thrown
+    - Get:
+        myCat.get('name', 'cat doesn't have a name')
+        1st param: key to get value from
+        2nd param: value to return if key isnt found
+    - Setdefault / check if key exists and set value if not:
+        myCat.setdefault('name', 'sam')
+        Checks if name key exists and if not create it and set it to sam
+        Returns the key's value
+    - Pretty Printing:
+        - Prints the contents of a dictionary better
+        import pprint
+        pprint.pprint(myCat) #prints
+        pprint.pformat(myCat) #returns a string
+    - Dict comprehension:
+        *Dict expression*
+        {x: x for x in numbers}       
+    - Zip / Create dict from a key list and value list:
+        [py]
+        name = [...]
+        address = [...]
+        mapped = dict(zip(name, address))
+        #{"name": "address", "name":...}
+        [end]
+    - Update values:
+        - any new key-value pairs will be added to the dictionary
+        - overlapping keys will be updated
+        dict1.update(dict2)
+Collections:
+    - like the above built in containers but w/ added stuff
+    namedtuple()
+    factory function for creating tuple subclasses with named fields
+    
+    deque
+    list-like container with fast appends and pops on either end
+    
+    ChainMap
+    dict-like class for creating a single view of multiple mappings
+    
+    Counter
+    dict subclass for counting hashable objects
+    
+    OrderedDict
+    dict subclass that remembers the order entries were added
+    
+    defaultdict
+    dict subclass that calls a factory function to supply missing values
+    
+    UserDict
+    wrapper around dictionary objects for easier dict subclassing
+    
+    UserList
+    wrapper around list objects for easier list subclassing
+    
+    UserString
+    wrapper around string objects for easier string subclassing
+<===================INDEXES/SLICES===================>
+Cheatsheet:
+    Indexes enumerate the elements
+    Slices enumerate the spaces between the elements
+
+    Index from rear:    -6  -5  -4  -3  -2  -1      a=[0,1,2,3,4,5]    a[1:]==[1,2,3,4,5]
+    Index from front:    0   1   2   3   4   5      len(a)==6          a[:5]==[0,1,2,3,4]
+                    +---+---+---+---+---+---+    a[0]==0            a[:-2]==[0,1,2,3]
+                    | a | b | c | d | e | f |    a[5]==5            a[1:2]==[1]
+                    +---+---+---+---+---+---+    a[-1]==5           a[1:-1]==[1,2,3,4]
+    Slice from front:  :   1   2   3   4   5   :    a[-2]==4
+    Slice from rear:   :  -5  -4  -3  -2  -1   :
+                                                    b=a[:]
+                                                    b==[0,1,2,3,4,5] (shallow copy of a)
+                                                    b = []
+                                                    b = b.extend(a)
+<===================FUNCTIONS===================>
+Functions:
+    [python]
+    def hello():
+        print('Hello')
+
+    hello()
+    [end]
+    - Typing:
+        - "void" functions return None (null)
+        - "forget method overloading", if type needs to be checked,
+            it needs to be checked with runtime function type()
+        - "type enforcement" in !Python 3.5>
+            def mult_two(a: int, b: int) -> int: 
+    - *FUNCTIONS ARE OBJECTS*
+        - functions can be stored in variables
+            [py]
+            def my_func():
+                print("hey")
+            sayHey = my_func  # no () means func wont execute, but store in var
+            sayHey()
+            [end]
+        - can be passed to other functions
+    - Function nesting: is possible (function defined inside of function)
+        - inner function cant be called from outside of outer function
+        - inner function can be returned
+    - Documentation:
+        [py]
+        def my_func(my_args):
+            '''These are the docs'''
+            pass
+        print(my_func.__doc__)  # Output: These are the docs
+        [end]
+Decorators:
+    https://stackoverflow.com/questions/5929107/decorators-with-parameters
+    https://www.google.com/search?client=firefox-b-1-d&q=decorator+with+arguments
+    https://www.geeksforgeeks.org/decorators-with-parameters-in-python/
+    https://www.youtube.com/watch?v=MjHpMCIvwsY
+    
+    - Allow you to change the behavior of a function without modifying the function
+    - What?: call function within another function (decorator func)
+    - When?: run the same code on multiple functions
+        - add logging
+        - test performance
+        - perform caching
+        - verify permissions
+    - How?: its a func that takes a func as a param and calls it in a nested function with code before and after the call potentially
+        [py]
+        def my_decorator_func(func):
+            def wrapper_func():
+                # Do something before the function.
+                func()
+                # Do something after the function.
+            return wrapper_func
+
+        @my_decorator_func
+        def execute_inside_wrapper():
+            pass
+        [end]
+        [py]
+        @mydeco
+        def add(a,b):
+            return a+b
+        #THINK THIS
+        def add(a,b):
+            return a+b
+        add = mydeco(add)
+        [end]
+        - add is a def object
+        - add is assigned another def object with the add object passed to it
+            - i.e. when add() is called actually calling mydeco(add)
+    - Arguments:
+        -
+Lambdas / anonymous / inline functions:
+    - anonymous function / function w/o name
+    - infinite parameters
+    - !one expression!
+    - !no return written / auto returns!
+    - returns function object (can store in variable)
+    add = lambda a,b: a+b
+    print(add(4,5)) #Output: 9
+
+<===================PARAMETERS===================>
+Optional Parameters:
+    - Optional parameters to pass to the function call
+    - ex) def print(*strings, sep=' '):  # sep is optional
+Pack Positional Arguments in one param:
+    [py] def my_funct(*args):
+    [end]
+    - Capture postional args and keyword args example)
+        [python]
+        def product(*numbers, initial=1):
+            total = initial
+            for n in numbers:
+                total *= n
+            return total
+        [end]
+Pack Undefined Keyword Aguments in one param:
+    [py] def my_funct(**kwargs):
+    [end]        
+ONLY keyword args (i.e. POSITIONALLY NOT OPTION):
+    def person(*, name, dateOfBirth):
+    - * as a parameter
+    - right side of * can only be defined by keyword args
+ONLY positional args:
+    !3.8!
+    - left side of / can onlye be defined by positional args
+    f(x,y, /)
+CHOOSE WHAT IS args and kwargs:
+    def foo(a, b, /, *, c, d=5):
+    # left side of / = positional args
+    # right side of * = kwargs
+    # foo(1,2,c=3) OR foo(1,2,c=3,d=4)
+
+<===================ARGUMENTS===================>
+Positional Arguments:
+    - *Order* of arguments *matters* when passed positionally
+        [python]
+            def quadratic(a=0, b=0, c=0): #a, b, c have default values of 0
+                x1 = -b / (2*a)
+                x2 = sqrt(b**2 - 4*a*c) / (2*a)
+                return (x1 + x2), (x1 - x2)
+
+            quadratic(31, 93, 62)  # passed POSITIONALLY
+        [end]
+Keyword Arguments:
+    - Specify param when passing    
+    - *Order doesnt matter* when passed by name / keyword
+        [py] quadratic(a=31, c=62, b=93)  # passed by KEYWORD, no order matters
+        [end]
+        
+Unpack Args Positionally from one var:
+    >>> product(*numbers)
+    # EQUIVALENT TO 
+    >>> product(numbers[0], numbers[1])  
+    // def product(n1, n2) / numbers = [12, 1]
+    // SO ACTUALLY product(12, 1)
+Unpack Args into Keywords from one var:
+    items = {'name': "Trey", 'website': "http://treyhunner.com", 'color': "purple"}
+    format_attributes(**items)
+
+Required keyword arguments:
+    [python] def join(*iterables, joiner): 
+                if not iterables:
+                    return
+                yield from iterables[0]
+                for iterable in iterables[1:]:
+                    yield joiner
+                    yield from iterable
+            join(5,2,3)#error because joiner not passed
+            join(5,2,3, joiner=",")
+    [end]
+    - iterables catches all positional args 
+    - so "joiner" must be defined as keyword inargs due to no default val
+
+- inspect.get_signature to see how functions label args
+<===================CLASSES===================>
+Classes:
+    [py]
+        class fib:
+            myVar = "test"  # class variable / property
+            def __init__(self):  # constructor
+                self.prev = 0  # instance variable
+                self.curr = 1
+            def __del__(self):  # destructors (called when del myObj)
+                pass
+            def __iter__(self):  # makes it an iterable
+                return self
+            def __next__(self):  # makes it an iterator
+                value = self.curr
+                self.curr += self.prev
+                self.prev = value
+                return value
+        f = fib()
+        list(islice(f,0,10)) #[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+    [end]
+    - !self required as first param of every member function / instance method
+        - (instance of class) passed automatically as first argument
+Method Types:
+    - Instance Method:
+        - access / modify object state (by modifying instance variables)
+        - self parameter
+    - Class Method:
+        - access / modify class state (
+Access Modifiers:
+    - Public:
+        automatic
+    - Protected:
+        _ prefix on function name
+        like private, but can be accessed by children
+    - Private:
+        __ prefix on member name
+Function Modifiers:
+    - Class Method:
+        "@classmethod" decorator put above function definition
+        - Causes the method to implicitly receive the class as the first argument
+        - Bound to the class and can alter its state
+        - When to use?:
+            - Factory methods (similar to constructor) that will return class objects
+    - Static Method:
+        "@staticmethod" decorator
+        - Does not receive an implicit first argument
+        - Can not access or modify the class state
+        - When to use?:
+            - Utility Functions
+            - Makes sense for the function to be in the class
+Inheritance:
+    class Teacher(Person):
+        def __init__(self, name, age, subject):
+            self.subject = subject
+            
+            Person.__init__(self,name, age)  # calls the parent constructor
+<===================OBJECTS===================>
+- Test if callable:
+        callable(object)  # True if object has __call__() method  / Classes are callable
+<===================GENERATORS===================>
+Generators:
+    !Generate the next value on the fly rather than storing it all in memory
+    !Can only be used once
+    - Allow for iterables & iterators w/o __iter__() and __next__() objects
+    - They are still an iterator
+    - Easy Examples:
+        [py]
+            def createGenerator():
+                myList = range(3)
+                print("second print")
+                for i in myList:
+                    yield i*i  # yield makes it a generator
+                    print("test")  # prints after each print(i)
+            mygenerator = createGenerator() # create a generator
+            print("first print")
+            for i in mygenerator:
+                print(i)
+        [end]
+    - yield:
+        - no return statement, instead a *yield*
+        - returns a generator
+        - When function is called no code is ran (prev, curr = 0,1 not ran when function called)
+        - waits for __next__ to be called on the generator object to start executing code
+            - stops executing after yield ran
+    - Order of execution:
+        [py]
+            #same as the class above
+            def fib():
+                prev, curr = 0,1
+                while True:
+                    yield curr
+                    prev,curr = curr, prev + curr
+            f = fib()
+            list(islice(f, 0, 10)) #islice is an efficient split
+        [end]
+        - f is idle, islice() is idle,
+            list() will consume all of its arguments by
+            calling next() on the islice() instance which will
+            call next() on the f instance
+        - yield curr produces value in curr and go idle again
+        - islice will produce it because not past 10th value
+        - list can add curr's value of 1
+        - next iteration will pick up after yield until yield encountered again
+        - repeats until list() asks islice() for the 11th value
+        - islice() will raise a "StopIteration" exception
+        - generator (f) will be garbage collected
+    - Generator Expression:
+        [py]
+            numbers = [1,2,3,4,5,6]
+            lazy_squares = (x * x for x in numbers)  # ( ) makes it a generator
+            lazy_squares #<generator object <genexpr> at 0x10d1f5510>
+            next(lazy_squares) #1
+            list(lazy_squares) #[4,9,16,25,36]
+        [end]
+        [python]
+        return ", ".join(  #NO FUCKING CLUE WHAT THIS IS LOL
+                f"{param}: {value}" #generator expresion
+                for param, value in attributes.items()
+            )
+        [end]
+        - can never get the 1 again! Only can be used/iterated once
+    - Why use?:
+        - Less memory, CPU, & lines of code
+    - When to use?:
+        - Useful when you have a huge set of values you only need to read once
+        [py]
+            #Instead of this
+            def something():
+                result = []
+                for ... in ...:
+                    result.append(x)
+                return result
+            #Do this
+            def iter_something():
+                for ... in ...:
+                    yield x
+            something = list(iter_something()) #Only if you need a list structure
+        [end]
+    - print contents:
+        print(*(f"{s}" for s in ["bar", "test"]))
+        * = unpacking operator (iterates(i.e. call __next__()) over iterable and assigns each value to a different variable)
+    - "itertools" library assists a lot
+<===================Iteration===================>
+https://stackoverflow.com/a/237028
+Iterable:
+    - Technically:
+        - object that has an *__iter__()* 
+        which returns an iterator (could just return self)
+    - any iterable object (not necessarily a ds) 
+    - like list, tuple, set, range(), string, file
+    - values stored in memory
+    
+Iterable Functions:
+    - Map / apply function to each element in list:
+        map(func, list) 
+        # returns map object with results
+        # (call list(map(...)) to get lists)
+    - Filter:
+        filter(func, list)
+        # applys function to each element of list
+        # returns filter object with elements that returned true
+        # (call list(filter(...)) to get lists)
+    - Reduce / apply function to each pair of elements in list and return one value:
+        from functools import reduce
+        reduce(func, list)
+        multiply=reduce(lambda a,b:a*b,seq)
+    - Zip:
+        zip(*iterables)
+        Takes 0 or more iterables 
+        and makes an iterator of ith tuples
+        and stops at the length of the shortest iterable
+        ex) iterable1[0] AND iterable2[0] stored in the 0th tuple
+    - All True?:
+        all(iterable)
+    - Any True?:
+        any(iterable)
+    - Reverse Iterator:
+        reversed(seq)
+        - Prereqs:
+            - seq has a __reversed__()
+            OR
+            - *Sequence Protocol* supported
+                - __len__()
+                - __getitem__()
+                - w/ int args starting at 0
+        returns a reverse iterator
+Iterable vs Iterator:
+    - Iterable = overal ds
+    - Iterator = the iterable ds but with a state that 
+                    will produce the next value when you call next()
+Iterator:
+    - Any object that has a *__next__()* method.
+    - Iterator Protocol:
+        - happens whenever python wants to loop over the contents of an object, for ex)
+            for x in mylist:
+                 ...
+
+        1. Get an iterator for iterable/mylist:
+        Call iter(mylist) -> this returns an object with a next() method (or __next__() in Python 3).
+        //This is the step most people forget to tell you about
+        2. Use the iterator to loop over items:
+        Keep calling the next() method on the iterator returned from step 1. 
+        The return value from next() is assigned to x
+        The loop body is executed. 
+        If an exception StopIteration is raised from within next(), it means there are no more values in the iterator and the loop is exited.
+<===================GLOBAL===================>
+Global:
+    - define a global variable in local scope with global keyword
+    [python]
+    def spam():
+        global eggs
+        eggs = 'spam'
+    eggs = 'global'
+    spam()
+    print(eggs) #prints spam
+    [end]
+
+<===================EXCEPTIONS===================>
+Exceptions:
+    - try catch:
+        [python]
+            try:
+                print(42/0)
+                print(42/2) #never ran
+            except ZeroDivisionError:
+                print('cant divide by 0')
+            except:
+                print('Something happened')
+            finally:
+                print('Code done')  # executes no matter if try or except execute
+        [end]
+    - throw exception:
+        [py]
+            if False:
+                raise Exception("It's false")
+                # raise ValueError("Not proper value etc")
+        [end]
+    - traceback errors (import traceback)
+    - assert:
+        assert podBayDoorStatus == 'open', 'The pod bay doors need to be "open".'
+        if the assert fails the code fails
+
+<===================INPUT===================>
+Input:
+    name = input("Enter your input here: ")
+    - prompt argument:
+        - default first positional argument
+        - will prevent a new line after text
+<===================CONTEXT MANAGERS===================>
+- ensures that resources are returned after usage
+With Keyword:
+    with open("test.txt") as f:
+        data = f.read()
+    - returns resources after with statement exits
+Creating from Scratch:
+    - __enter__()
+        # returns the resource that needs to be managed
+    - __exit__()
+        # no return, performs cleanup
+    [py]
+        class ContextManager():
+            def __init__(self):
+                print('init method called')
+                
+            def __enter__(self):
+                print('enter method called')
+                return self
+            
+            def __exit__(self, exc_type, exc_value, exc_traceback):
+                print('exit method called')
+        
+        with ContextManager() as manager:
+            print('with statement block')
+        print("Last thing to be printed")
+    [end]
+<===================FILES===================>
+Files:
+    import os
+    - Handling files proper:
+        with open("test.txt") as f:
+            data = f.read()
+        # OR
+        [py]
+            class FileManager():
+                def __init__(self, filename, mode):
+                    self.filename = filename
+                    self.mode = mode
+                    self.file = None
+                    
+                def __enter__(self):
+                    self.file = open(self.filename, self.mode)
+                    return self.file
+                
+                def __exit__(self, exc_type, exc_value, exc_traceback):
+                    self.file.close()
+            
+            # loading a file
+            with FileManager('test.txt', 'w') as f:
+                f.write('Test')
+            
+            print(f.closed)
+        [end]
+    - Join file path:
+        os.path.join('usr', 'bin', 'spam')
+    - Get current working directory:
+        os.getcwd()
+    - Change current working directory:
+        os.chdir
+    - File size:
+        os.path.getsize(path)
+    - Get files in dir:
+        os.listdir(path)
+    - Check if it exists:
+        os.path.exists(path)
+    - Check file exists:
+        os.path.isfile(path)
+    - Check dir exists:
+        os.path.isdir(path)
+    - Open/read/write/close file:
+        myFile = open(path, mode = r)
+        myContents = myFile.read()
+        readlines() # list of string values from file
+        myFile.close()
+
+        #write
+        open(path, w) # overrides original file contents
+        # creates a new file if it doesnt exist
+        write('test') 
+        myFile.close()
+
+        #append
+        open(path, a) # append to the end of the file
+
+    - copy,move,rename,delete:
+        import shutil
+
+    - safe delete:
+        import send2trash
+<===================STL===================>
+Standard Library:
+    https://docs.python.org/3/library/
+    - Modules written in C to give access to the system Python doesnt have
+    - standardized solutions to common problems in programming
+    - enhance portability by abstracting away platform-specifics into platform-neutral APIS
+    - Command Line arguments:
+        import sys
+        sys.argv[1]
+
+    - random:
+        [python]
+        import random, sys, os, math
+        random.randint(1,10)
+        from random import * #from random import everything
+        randint(1,10) #didnt need to specify random. because of from
+        sys.exit()
+        [end]
+        ! help(randint)
+    
+    - Security Considerations:
+        - base64, cgi, hashlib, http.server, logging, multiprocessing, pickle
+          random, shelve, ssl, subprocess, tempfile, xml, zipfile
+        https://docs.python.org/3/library/security_warnings.html
+
+<===================3RD PARTY LIBRARIES===================>
+Third-Party Modules:
+    !INSTALL done with pip:
+        - Windows:
+        In the python directory, under scripts folder
+        ./pip.exe install pyperclip
+        OR
+        python -m pip install pyperclip # may require eleveation
+        - macOS:
+        python3 -m pip install pyperclip
+        - linux:
+        apt-get install python3-tk
+        python3 -m pip install pyperclip
+    - copy/paste:
+        import pyperclip
+        pyperclip.copy('test')
+        pyperclip.paste()
+
+    - Save variables to hard drive:
+        import shelve
+        myFile = shelve.open('mydata')
+        cats = ['zophie', 'pooka', 'Simon']
+        myFile['cats'] = cats
+        myFile.close()
+    - matplotlib:
+        - wont show on wsl
+        import matplotlib.pyplot as plt
+    - numpy:
+        import numpy as np
+   - logging: logs
+<===================CONCURRENT EXECUTION===================>
+Asyncio:
+    Asyncronous I/O
+    import asyncio
+    https://docs.python.org/3/library/asyncio.html
+    - distribute tasks via queues
+Multiprocessing:
+    Process-based Parallelism
+    import multiprocessing
+    https://docs.python.org/3/library/multiprocessing.html
+    - Spawns processes by side-stepping the Global Interpretter Lock
+        and using subproceses instead of threads
+        - *Global Interpretter Lock* => assures CPython only has one thread execute Python bytecode
+    - When to use:
+        - for CPU heavy processes that dont benefit from threading
+        - Programs that need more CPU
+    - from multiprocessing import Process: creating a process
+    - from multiprocessing import Pool:
+        - offers a convenient means of paralellizing the execution of a function
+            across multiple input values ()
+Threading:
+    - a thread is an execution context (all the info needed to execute / resume executing a stream of instructions)
+    - two things appearing to be happening at once
+        - but threads dont run at the same time
+        - even if they are on different processors
+    - When to use?:
+        - Tasks that spend much of their time waiting for external events
+        - NOT for processes that require heavy CPU computation and spend little time waiting for external events might not run faster at all.
+        - NOT for CPU-bound problem
+        - Want tasks to run simultaneously and not have to wait on each other
+            i.e. CONCURRENCYL
+    - takes far less time to create & terminate a thread than to create a new procees
+    - can share common data, they do not need to use inter-process communication
+    - slower than context switching
+    - Python implementation dependent
+    - Example:
+        A web browser will need multiple threads
+        1) Display the page
+        2) Download files
+        ...
+        If you only had one thread, the web page could not display while the download is happening
+multiprocessing vs threading:
+    - A program running is called a process
+    - A program can have mulitple processes
+    - A process can have multiple threads
+    - Memory:
+        - A process has data
+        - A thread has a stack, registers, and the program counter
+Subprocess:
+    - run & control other programs
+<===================VIRTUAL ENVIRONMENT===================>
+How 2 Virtual Enivornment:
+    - Windows:
+        1) py -3 -m venv .venv
+        2) .venv\scripts\activate
+        3) if "Activate.ps1...", change PowerShell execution policy to allow scripts to run
+            1) Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+    - macOS/Linux:
+        1) python3 -m venv .venv
+        2) source .venv/bin/activate
+    - deactivate
+        $ deactivate
+VSCode:
+    - Prompted when a new virtual environment created:
+        - "Set as default for your workspace folder?"
+        - If yes, Environment automatically activated when you open a new termianl
+    - !Set environment as python interpretter

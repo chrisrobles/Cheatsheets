@@ -1,0 +1,3 @@
+Depth First Search is a graph traversal algorithm which explores as far as possible along each branch before backtracking
+
+Time Complexity: O(|V| + |E|)
