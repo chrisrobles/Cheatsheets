@@ -25,23 +25,23 @@ Purpose is to store:
 Github recommend every repository include a [README](https://github.com/chrisrobles/empty-test/new/main?readme=1), [LICENSE](https://github.com/chrisrobles/empty-test/new/main?filename=LICENSE.md), and [.gitignore](https://github.com/chrisrobles/empty-test/new/main?filename=.gitignore). 
 
 1. Clone
-`git clone git@github.com`
+   `git clone git@github.com`
 2. create a new repository on the command line
-  ```terminal
-  echo "# empty-test" >> README.md
-  git init
-  git add README.md
-  git commit -m "first commit"
-  git branch -M main
-  git remote add origin git@github.com:chrisrobles/empty-test.git
-  git push -u origin main
-  ```
+    ```terminal
+    echo "# empty-test" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin git@github.com:chrisrobles/empty-test.git
+    git push -u origin main
+    ```
 3. push an existing repository from the command line
-  ```terminal
-  git remote add origin git@github.com:chrisrobles/empty-test.git
-  git branch -M main
-  git push -u origin main
-  ```
+    ```terminal
+    git remote add origin git@github.com:chrisrobles/empty-test.git
+    git branch -M main
+    git push -u origin main
+    ```
 #### Create a new repository on the command 
 
 ### Private Repository
