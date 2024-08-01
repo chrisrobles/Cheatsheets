@@ -62,6 +62,12 @@ Download composer
 10) `composer install` should work
 11) `vendor/` folder will have been created if worked
 
+### Inside Composer.json
+
+The "require" section will show all the packages that are installed and are required
+
+The "scripts" section are commands to run when `composer install` is ran
+
 ## PHP
 
 ### Get version
@@ -79,8 +85,7 @@ Download composer
 
 ### Download PHP Packages
 
-`sudo apt install php7.1-common php7.1-fpm php7.1-gd php7.1-imap php7.1-mbstring php7.1-mysql php7.1-ldap php7.1-mcrypt php7.1-intl php7.1-xml php7.1-xmlrpc php7.1-imagick libapache2-mod-php7.1 libapache2-mod-fcgid -y`
-
+`sudo apt install php7.1-common php7.1-fpm php7.1-mbstring php7.1-mysql php7.1-ldap -y`
 - LDAP is for microsoft access controls
 - fpm provides the Fast Process Manager interpreter that runs as a daemon and receives Fast/CGI requests
 - mysql connects php to the mysql database
