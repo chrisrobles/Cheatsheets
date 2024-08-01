@@ -72,7 +72,7 @@ Table prettify in VSCode:
 | Header     | Header | Header |
 | :--------- | :----: | -----: |
 | Left       | Middle |  Right |
-| \| escaped |
+| \| escaped | | |
 
 Cant include :
 
