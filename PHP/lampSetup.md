@@ -211,7 +211,7 @@ Get websites running on a Linux Desktop
 - `conf-available/` and `conf-enabled/`
   - miscellaneous config files
 
-### Configure sites-available / enabled
+### Configure sites-available .conf & enable
 
 Create site configuration
 1) `sudo -i`
