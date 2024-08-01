@@ -7,11 +7,11 @@ To help someone on a Debian based Linux distro (specifically Ubuntu)
 ### Ubuntu vs CentOs
 
 - Ubuntu
-    - most popular distro of linux
-    - for desktop
-    - easy
-    - good selection of packages
-    - apache2 web server
+  - most popular distro of linux
+  - for desktop
+  - easy
+  - good selection of packages
+  - apache2 web server
 - CentOs
   - for web servers
   - packages lag behind
@@ -43,8 +43,6 @@ To help someone on a Debian based Linux distro (specifically Ubuntu)
         - This makes it easier to mess around with partitions later on
     4) (Optional) Check `Encrypt the new Ubuntu`
 
----
-
 ## Package Manager
 
 Package manager installs and updates packages from the added repositories
@@ -62,15 +60,13 @@ Download composer
 8) `exit`
 9) `cd /var/www/html`
 10) `composer install` should work
-11) `vendor/` folder will have been created  in tac/ if worked
+11) `vendor/` folder will have been created if worked
 
 ## PHP
 
 ### Get version
 
 `php -v`
-OR
-`php74 -v`
 
 ### Get list of php packages 
 
@@ -85,7 +81,7 @@ OR
 
 `sudo apt install php7.1-common php7.1-fpm php7.1-gd php7.1-imap php7.1-mbstring php7.1-mysql php7.1-ldap php7.1-mcrypt php7.1-intl php7.1-xml php7.1-xmlrpc php7.1-imagick libapache2-mod-php7.1 libapache2-mod-fcgid -y`
 
-- LDAP is for microsoft access controls (used for TAC logins)
+- LDAP is for microsoft access controls
 - fpm provides the Fast Process Manager interpreter that runs as a daemon and receives Fast/CGI requests
 - mysql connects php to the mysql database
 - libapache2-mod-php7.1 provides the php module for the apache web server
@@ -122,7 +118,7 @@ Make PHP usable by apache2
 
 `a2enmod php7.1`
 
----
+
 
 ## Database
 
@@ -193,11 +189,11 @@ MYSQL has become commercial and not as user friendly, MariaDB is a better altern
 2) (optional) scp user@server.name:/path/to /path/to
 3) mysql {TABLE} < mydb.sql.gz -u {USER} -p
 
----
+
 
 ## Apache Setup
 
-Get TAC and other websites running on a Linux Desktop
+Get websites running on a Linux Desktop
 
 - `apache2.conf`
   - master configuration file
@@ -208,22 +204,23 @@ Get TAC and other websites running on a Linux Desktop
 - `mods-available/` and `mods-enabled/` 
   - apache mods
 - `conf-available/` and `conf-enabled/`
-    - miscellaneous config files
+  - miscellaneous config files
 
 ### Configure sites-available / enabled
 
 Create site configuration
 1) `sudo -i`
-2) `cd /etc/apache2/sites-available` (TAC) `cd /etc/httpd/conf` (Odin LIVE)
-3) `mkdir /var/www/tac`
+2) `cd /etc/apache2/sites-available`
+or `cd /etc/httpd/conf`
+3) `mkdir /var/www/mySite`
 4) Create a YOUR_SITE.conf file
-5) `nano YOUR_SITE.conf` (TAC) `nano httpd.conf` (Odin)
+5) `nano YOUR_SITE.conf` or `nano httpd.conf`
 6) Paste in
     ```nano
     <VirtualHost *:80>
-        ServerName tac.local
+        ServerName mySite.local
         ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/tac
+        DocumentRoot /var/www/mySite
         
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -234,9 +231,9 @@ Create site configuration
         </Location>
     </VirtualHost>
     <VirtualHost *:443>
-        ServerName tac.local
+        ServerName mySite.local
         ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/tac
+        DocumentRoot /var/www/mySite
         
         SSLEngine On
             SSLCertificateFile /etc/apache2/ssl/certificate.crt
@@ -254,9 +251,9 @@ Create site configuration
    - Explanation
       - `<VirtualHost *:443>` is website virtual host and the port number to attach it to
          - 80=http 443=https
-      - `ServerName tac.local` domain name
+      - `ServerName mySite.local` domain name
       - `ServerAdmin webmaster@localhost` doesnt matter what email address is put
-      - `DocumentRoot /var/www/tac` the directory apache looks for the files
+      - `DocumentRoot /var/www/mySite` the directory apache looks for the files
       - `SSLEngine On` tells apache this is running over https
       - `SSLCertificateFile /etc/apache2/ssl/certificate.crt` need certificate for https
       - `SSLCertificateKeyFile /etc/apache2/ssl/private.key` need key for https
@@ -298,7 +295,7 @@ Enable site from sites-available
 7) Copy something along the lines of
    `openssl req -x509 -newkey rsa:4096 -keyout private.key -out certificate.crt -days 3650 -nodes` -nodes skips the password
 8) Paste into terminal and run
-     1) `Common Name []: tac`
+     1) `Common Name []: mySite`
 9) `apachectl configtest` looking for a "Syntax OK"
 
 ### Apache AllowOverride
@@ -332,9 +329,9 @@ Enable site from sites-available
 2) `nano /etc/hosts`
    1) Go down to 127.0.0.1
    2) `ctrl+e` to go to end of line
-   3) Add tac `localhost tac` domain name after localhost and add subsequent urls after tac
+   3) Add mySite `localhost mySite` domain name after localhost and add subsequent urls after mySite
 
----
+
 
 ## Linux Utilities
 
@@ -342,8 +339,6 @@ Enable site from sites-available
 
 1) `sudo -i`
 2) `apt install screen curl wget lso`
-
----
 
 ## Git
 
@@ -386,8 +381,6 @@ Enable site from sites-available
 8) `cd /var/www`
 9) `git clone` then paste in text from git labs
 
----
-
 ## Symfony
 
 Install
@@ -395,8 +388,6 @@ Install
 ```terminal
 wget https://get.symfony.com/cli/installer -O - | bash
 ```
-
----
 
 ## PHPStorm
 
