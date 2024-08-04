@@ -2,17 +2,31 @@
 
 Open-source HTTP Server
 
+## Start, Stop, Restart
+
+`sudo systemctl start apache2`
+`sudo systemctl stop apache2`
+`sudo systemctl restart apache2`
+
+## Check apache2 status
+
+`sudo service apache2 status`
+
 ## Check if module is installed
 
-`$ dpkg -s libapache2-mod-wsgi`
+`dpkg -s libapache2-mod-wsgi`
 
 ## Check Loaded Modules
 
-`$ apache2ctl -t -D DUMP_MODULES`
+`apache2ctl -t -D DUMP_MODULES`
 
-## httpd.conf
+## Configuration file
 
+httpd.conf (CentOS/Redhat) or apache2.conf(Ubuntu/Debian)
 
+`/etc/httpd/conf/httpd.conf`
+
+`/etc/apache2/httpd.conf`
 
 ### mod_wsgi
 
