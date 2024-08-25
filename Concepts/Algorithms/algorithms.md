@@ -203,6 +203,8 @@ def fib_top_down(n):
 ```
 
 ### Bottom-Up
+
+[article](https://medium.com/cracking-the-coding-interview-in-ruby-python-and/bottom-up-and-top-down-recursion-explained-with-examples-in-ruby-javascript-and-python-mastering-9fa051ee53ff)
 aka Aggregative or Dynamic Programming
 
 Starts with the simplest subproblem (base case), then uses the subproblem to solve more complex subproblems all the way up to the original problem

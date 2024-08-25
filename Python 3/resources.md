@@ -12,4 +12,12 @@
 <li><a href="https://www.diveintopython3.net/">Dive Into Python 3</a></li>
 <li><a href="https://pythonbasics.org/">Python Tutorial for Intermediates</a></li>
 <li><a href="https://pythonpyqt.com/">Build a Desktop App with Python</a></li>
+<li><a href="https://quickref.me/python"></a>Alternate Python Cheatsheet</li>
+<li><a href="https://pep8.org/">Style Guide</a></li>
+<li><a href="http://pythontutor.com/visualize.html#mode=edit">IDE Line by Line Execution</a></li>
+<li><a href="https://www.online-python.com">Online IDE</a></li>
 </ul>
+
+## Python Interview Resources
+
+<https://www.clcoding.com/2023/05/python-interview-questions-fresher.html?m=1>
