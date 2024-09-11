@@ -1,10 +1,12 @@
 # Fetch
 
-Make GET requests using `fetch()` in JS
+Make requests using `fetch()` in JS
+
+`fetch(url, objectConfig)`
 
 ![fetch code](fetch.png)
 
-1. Call `fetch()` with endpoint URL as argument
+1. Call `fetch()` with endpoint URL as first argument
    1. Makes request object w/ info for API
    2. Sends the request object to the API endpoint
    3. Returns Promise that resolves a response object
@@ -18,3 +20,9 @@ Make GET requests using `fetch()` in JS
    - networkError() w/ error argument
 3. Chain 2nd `.then()` with jsonResponse() (handleResolve())
    - jsonResponse() w/ jsonResponse argument (resolved value from previous .then())
+
+## Fetch Config
+
+- `method: 'POST'`
+- `body: JSON.stringify({id: '200'})`
+
