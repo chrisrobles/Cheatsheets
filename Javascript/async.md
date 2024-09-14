@@ -30,14 +30,13 @@ Async operation object that "Promises" to settle
 - ES6 method of handling asynchronous actions
 
 ```js
-const executorFunction = (resolve, reject) => {
+const myPromise = new Promise((resolve, reject) => {
    // start of async operation
     if(someCondition)
         resolve('I resolved');
     else
         reject('I reject');
-}
-const myPromise = new Promise(executorFunction);
+});
 ```
 
 JS passes in its own resolve and reject functions
@@ -63,11 +62,11 @@ JS passes in its own resolve and reject functions
 
 If not in a Pending state then it has been *settled*
 
-### Then
+### Then | Success Handler
 
 Action executed after a Promise settles
 - Always uses the first parameter as the resolved handler and the second parameter for the rejected handler
-- It creates and returns a new promise
+- Returns a new promise
 
 ```js
 myPromise.then(handleResolved, handleRejected)
@@ -77,9 +76,9 @@ myPromise
    .then(null, handleRejected)
 ```
 
-### Catch
+### Catch | Reject Handler
 
-Accomplishes the same thing as a second then, handles rejected state
+Accomplishes the same thing as a second parameter in then, handles rejected state
 - just used for separation and readability 
 
 ```js
@@ -94,17 +93,17 @@ prom
 
 ### Composition | Chaining Promises
 
-When an operation depends on a Promise (async operation), return a Promise in the success handler so it can wait for the first Promise to successfully settle.
+When an operation depends on a Promise (async operation), **return a Promise in the success handler** so it can wait for the first Promise to successfully settle.
 - replaces the default new Promise return
 - dont nest promises
 - dont forget to return a promise inside the then
 
 ```js
 firstPromiseFunction()
-.then((firstResolveVal) => {  // success handler
+.then((firstResolveVal) => {
   return secondPromiseFunction(firstResolveVal);
 }) // handling second promise
-.then((secondResolveVal) => { // success handler
+.then((secondResolveVal) => {
   console.log(secondResolveVal);
 });
 ```
@@ -116,8 +115,6 @@ Multiple async operations happening together as one Promise
 - if a single Promise rejects, immediately rejects `Promise.all()`
 
 ```js
-Promise.all(arrayOfPromises); // returns single let 
-
 let myPromises = Promise.all([returnsPromOne(), returnsPromTwo(), returnsPromThree()]);
 
 myPromises
@@ -142,13 +139,15 @@ ES8's method for async actions
 
 // Function Declaration
 async function myFunc() {
-   let resolvedValue = await myPromiseFirst(); // returns resolved value of Promise
+  let resolvedValue = await myPromiseFirst(); // returns resolved value of Promise
 
-   let resolvedValue = await myPromiseSecond(resolvedValue);
+  //Composition (by waiting for the first promise and using resolved value)
+  let resolvedValue = await myPromiseSecond(resolvedValue);
 
-   // 1. Nothing returned, returns Promise.resolve(undefined)
-   // 2. Non-Promise value returned, returns Promise.resolve(Non-Promise value)
-   // 3. Promise returned
+  // Return
+  // 1. Nothing returned, returns Promise.resolve(undefined)
+  // 2. Non-Promise value returned, returns Promise.resolve(Non-Promise value)
+  // 3. Promise returned
 }
 
 myFunc()
@@ -188,15 +187,17 @@ let rejectedPromise = usingPromiseCatch()
 ### Concurrency | Multiple Promises
 
 Create Promises without await, then await each of their resolutions
-- if each Promise is truly independent and parallelism is needed,
+
+if each Promise is truly independent and parallelism is needed,
   - must use individual `.then()` functions
   - or use `await Promise.all()`
 
 ```js
 async function concurrent() {
-   const firstPromise = firstAsyncThing();
-   const secondPromise = secondAsyncThing();
-   console.log(await firstPromise, await secondPromise); // async func halts at first await, but both promises started
+  // start at same time
+  const firstPromise = firstAsyncThing();
+  const secondPromise = secondAsyncThing();
+  console.log(await firstPromise, await secondPromise); // async func halts at first await, but both promises started
 
    // true concurrency
    let resolvedArray = await Promise.all([firstPromise, secondPromise]);
