@@ -1,4 +1,6 @@
-# Object-Oriented Programming
+# Programming Styles
+
+## Object-Oriented Programming
 
 [Grokking the Low Level Design Interview Using OOD Principles](https://www.educative.io/courses/grokking-the-low-level-design-interview-using-ood-principles)
 
@@ -7,10 +9,9 @@ Using objects to design and build applications.
 Objects
 : Combines data and functionality. Building block of OOP. Example, a person object, a dog object.
 
-## Principles
+### Principles
 
-
-### 1. Encapsulation
+#### 1. Encapsulation
 
 Bundling the methods and properties in an object, protecting it from the outside
 
@@ -22,7 +23,7 @@ class Dog:
         return "Woof!"
 ```
 
-### 2. Abstraction
+#### 2. Abstraction
 
 Hiding complex details and showing only what's necessary
 
@@ -41,7 +42,7 @@ class Dog(Animal):
         return "Woof!"
 ```
 
-### 3. Inheritance
+#### 3. Inheritance
 
 Child classes and take on the properties and behaviors of a parent class
 
@@ -56,7 +57,7 @@ class Dog(Animal): # Animal = extend Animal class
         return "Woof!"
 ```
 
-### 4. Polymorphism
+#### 4. Polymorphism
 
 Greek for "many forms"
 
@@ -70,3 +71,11 @@ class Cat:
     def speak(self):
         return "Meow!"
 ```
+
+## Procedure Oriented Programming
+
+Programs are designed as blocks of statements to manipulate data
+
+## Functional Programming
+
+Programs are constructed by composing pure functions, where the output depends on the input and does not alter external data or state

@@ -252,3 +252,34 @@ Math.random() * 50; //Random number between 0 and 49
 
 Math.floor(Math.random() * 50); //Rounds down to the nearest whole number
 ```
+
+## Error
+
+### Error Handling
+
+```js
+try {
+
+} catch(error) {
+
+}
+```
+
+### Custom Error
+
+Create a custom error object that can be thrown
+
+```js
+console.log(Error('Custom error message'));
+// or 
+let myError = new Error('Custom error message');
+```
+
+### Throw Error
+
+Stops a program from running
+
+```js
+throw Error('Something wrong happened');
+```
+
