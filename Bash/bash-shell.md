@@ -1,4 +1,8 @@
-# Useful Terminal Commands
+# Bash Shell
+
+## Customize
+
+<https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/>
 
 ## nano
 
@@ -10,6 +14,10 @@
 
 - Go to end of line
   - ctrl+e
+
+### Configure
+
+<https://www.linuxhowtos.org/System/config_nano.htm>
 
 ## Apachectl -k __ (Debian)
 

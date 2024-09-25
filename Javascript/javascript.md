@@ -2,6 +2,9 @@
 
 `<script src="js/main.js"></script>`
 
+- Single-threaded language
+- Event-driven language
+
 ## Console Log
 
 ```js
@@ -29,6 +32,15 @@ if(typeof num === "Number")
     else
       console.log("Invalid input: numberOfStudents must be set to a Number.")
 ```
+
+### const vs let vs var
+
+var should never be used
+- it is hoisted to the top of function blocks (not other blocks)
+- var is initialized as undefined
+
+use const and let
+- they will return a ReferenceError if used before initialization
 
 ## Dialog
 
@@ -93,6 +105,11 @@ Anonymous Function
 (myParam) => {
   // ...
 }
+```
+
+### Parameters
+
+If function is called without filling in all the arguments, the parameter will default to `undefined`.
 
 ## Arrays & Strings
 
@@ -283,3 +300,33 @@ Stops a program from running
 throw Error('Something wrong happened');
 ```
 
+## Currying
+
+- guarantee all arguments have been entered
+- make code more modular
+
+```js
+function curriedMultiply(a) {
+   return function(b) {
+       return a * b; // retains the scope of the outer parent due to closure
+   }
+}
+// Write your code here
+let nestedFunction = curriedMultiply(9);
+let result = nestedFunction(2);
+
+let result = curriedMultiply(9)(2);
+```
+
+### Currying with Arrow Functions
+
+```js
+let result = a => b => a*b;
+// result = a => ...
+// Calling result takes argument a and returns b => a * b
+// Invoking the second arrow function returns a*b
+```
+
+## Hoisted
+
+Variables and Functions are "hoisted" (pulled) to the top of their scope so they can be referenced before they are defined
