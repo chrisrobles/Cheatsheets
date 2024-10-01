@@ -1,3 +1,5 @@
+# Homebrew for PHP
+
 To enable PHP in Apache add the following to httpd.conf and restart Apache:
     LoadModule php7_module /opt/homebrew/opt/php@7.4/lib/httpd/modules/libphp7.so
 

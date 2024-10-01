@@ -1,6 +1,9 @@
 # Data Structures
 
+> A way to store data in an efficient manner inside of RAM
+
 ## Array
+
 Ordered, contiguous group of elements.
 
 Useful to:
@@ -8,6 +11,7 @@ Useful to:
 - Add to the end of a ds(stack)
 
 ### Static Arrays
+
 Cannot change size after initialization.
 
 Default in *strictly typed languages*.
@@ -22,15 +26,19 @@ myArray[0]  # 1
 ```
 
 #### Deleting
+
 For static arrays, all array indices are filled with a default value denoting an empty array (0,null,-1).
 
 ##### From the end - O(1)
+
 Simple as setting the end to a default empty value.
 
 ```python
 arr[length-1] = 0
 ```
+
 ##### From the middle - O(n)
+
 Cant set the value to a default value because it will break the contiguous order.
 
 So we must shift everything after `i`, one index to the left.
@@ -43,9 +51,11 @@ def deleteMiddle(arr, i, length):
         arr[index] = arr[index+1]
     arr[length-1] = 0
 ```
+
 #### Inserting
 
 ##### At the end - O(1)
+
 As long as the array has the capacity, can just insert at length
 
 ```python
@@ -54,6 +64,7 @@ if length < capacity:  # capacity = memory allocated for the fixed size array
 ```
 
 ##### At the middle - O(n)
+
 Shift all values >= `i` to the right
 
 ```python
@@ -64,6 +75,7 @@ def insertMiddle(arr, i, val, length):      # (arr, 1, val, 3)
 ```
 
 ### Dynamic Arrays
+
 Can change size. (Dont need their size specified.)
 
 Default in *loosely typed languages*.
@@ -81,6 +93,7 @@ Default in *loosely typed languages*.
 > > Use to ensure the average performance is acceptable, even if some individual operations might take longer
 
 #### Reallocate - O(n)
+
 When the array gets too big for its allocation, it reallocates a bigger array (usually double) in memory. (Also it deallocates the old array.)
 
 Reallocating happens so infrequently the O(n) time complexity for reallocating isnt really a concern. So, the amortized complexity (average) of pushing to the end of an array is still O(1).
@@ -171,6 +184,7 @@ class Node:
 ```
 
 ### Linked List Example
+
 ```python
 class LinkedList:
     def __init__(self):
@@ -228,18 +242,21 @@ class LinkedList:
 ```
 
 ## Doubly Linked List
+
 Linked list with an added `prev` pointer
 
 Useful to:
 - build stack
 
 ### Time Complexity
+
 Access: O(n)
 Search: O(n)
 Insertion at known: O(1)
 Deletion at known: O(1)
 
 ### Example
+
 ```python
 
 def update_decorator(func):
@@ -385,6 +402,7 @@ Useful for:
 - breadth first search
 
 ### Enqueue - O(1)
+
 Enter queue at `tail`
 
 ```python
@@ -401,6 +419,7 @@ def enqueue(self, val):
 ```
 
 ### Dequeue - O(1)
+
 Remove from queue at `head`
 - Check it's not empty first
 
@@ -419,6 +438,7 @@ def dequeue(self):
 ```
 
 ## Deque | "deck"
+
 Double-ended queue
 
 Add and remove from both ends

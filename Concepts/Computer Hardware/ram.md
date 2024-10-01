@@ -2,15 +2,17 @@
 
 Random Access Memory
 
-![img.png](assets/img.png)
+![img.png](assets/ram.png)
+
+Stores values at certain addresses
 
 ## Address
-
-`0x00` beginning address
 
 - Stores a byte value
 - 4 bytes apart
   - Since one int is 4 bytes
+
+`0x00` beginning address in hex
 
 ## Bit
 
