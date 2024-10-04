@@ -33,6 +33,12 @@ Use a variable that doesnt exist
 
 Perform an operation on a value of the wrong type
 
-## Tools
+## REPL
 
+(Read-Eval-Print Loop)
+
+REPL is an interactive programming environment that takes single user inputs, evaluates them, and returns the result to the user. It is commonly used for learning and experimenting with code.
+
+ex.)
+- `python` in CLI resulting in executing a single line of python at a time
 

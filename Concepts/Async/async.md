@@ -1,6 +1,6 @@
 # Asynchronous Programming
 
-> Asynchronous operation is one that allows the computer to **move on** to other tasks while waiting for the operation to complete
+> Asynchronous operation is one that allows the computer to **move on** to other tasks while waiting for the operation to complete.
 
 Time-consuming operations are made asynchronous so that the computer can execute other tasks while awaiting the completion of the original operation.
 

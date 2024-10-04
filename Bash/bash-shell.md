@@ -133,3 +133,9 @@ Or install it globally on your system:
 
 Then start a new shell and run 'symfony'
 ```
+
+## Alias
+
+Store shell commands in a variable
+
+`alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'`
