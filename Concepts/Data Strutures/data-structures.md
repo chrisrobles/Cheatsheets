@@ -19,59 +19,49 @@ Default in *strictly typed languages*.
 - C++
 - C#
 
-#### Reading - O(1)
+#### Read/Write - O(1)
+
 ```python
 myArray = [1,3,6]
-myArray[0]  # 1
+myArray[0]     # 1 / O(1)
+myArray[1] = 1 # 1 / O(1)
 ```
 
-#### Deleting
+#### End - O(1)
 
-For static arrays, all array indices are filled with a default value denoting an empty array (0,null,-1).
-
-##### From the end - O(1)
-
-Simple as setting the end to a default empty value.
-
+Insert O(1) - Assuming the array isnt full, you can instantly insert into the array at the end
 ```python
-arr[length-1] = 0
+def insertEnd(arr, numValues, val):
+    if numValues < len(arr):
+        arr[numValues] = val # insert after last value
 ```
 
-##### From the middle - O(n)
+Delete O(1) - Simply making it represent an empty space, as you wouldnt deallocate the memory since it's a fixed size.s
+```python
+def deleteEnd(arr, numValues):
+    if numValues > 0:
+        arr[numValues-1] = 0 # delete last value
+```
+
+##### Middle - O(n)
+
+Insert & Delete - 
 
 Cant set the value to a default value because it will break the contiguous order.
 
-So we must shift everything after `i`, one index to the left.
+So we must shift everything.
 
-Worst case would be deleting from the beginning, which would require n-1 shifts ( O(n) ).
+Worst case the insert / delete is at the beginning, and you would have to shift everything.
 
 ```python
-def deleteMiddle(arr, i, length):
-    for index in range(i, length-1):
+def insertMiddle(arr, i, val):
+    for index in range(len(arr)-1, i, -1):
+        arr[index] = arr[index-1]
+    arr[i] = val
+def deleteMiddle(arr, i):
+    for index in range(i, len(arr) - 1): # -1 b/c you dont want to grab +1 after the last index 
         arr[index] = arr[index+1]
-    arr[length-1] = 0
-```
-
-#### Inserting
-
-##### At the end - O(1)
-
-As long as the array has the capacity, can just insert at length
-
-```python
-if length < capacity:  # capacity = memory allocated for the fixed size array
-    arr[length] = n
-```
-
-##### At the middle - O(n)
-
-Shift all values >= `i` to the right
-
-```python
-def insertMiddle(arr, i, val, length):      # (arr, 1, val, 3)
-    for index in range(length-1, i-1, -1):  # range(2,0,-1) = 2,1
-        arr[index+1] = arr[index]           # start at index 3 because everything shifted to the right
-    arr[i] = val                            # replace index 1 with new value
+    arr[-1] = 0 # make the end of the array a default value
 ```
 
 ### Dynamic Arrays
