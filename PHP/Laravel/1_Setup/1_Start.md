@@ -60,6 +60,8 @@ Configuration file dependent on which machine is running
 
 All of the configuration files
 
+They can all be deleted because the default values exist in `vendor/` and Laravel's core
+
 #### `/config/app.php`
 
 - `timezone`

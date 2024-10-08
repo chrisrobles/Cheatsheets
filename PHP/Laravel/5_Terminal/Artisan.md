@@ -1,5 +1,9 @@
 # Laravel Artisan
 
+## Show All Artisan Commands
+
+`php artisan list`
+
 ## Start Local Development Server
 
 `php artisan serve`
@@ -64,3 +68,7 @@ A REPL for PHP code in your Laravel application
 ## Begin Processing Queued Jobs
 
 `php artisan queue:work`
+
+## Generate config file
+
+`php artisan config:publish`
