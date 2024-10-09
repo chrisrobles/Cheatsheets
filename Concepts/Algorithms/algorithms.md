@@ -4,13 +4,9 @@
 
 [Book](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844)
 
-## Diff algorithm
-
-[Wagner Fisher Algorithm](http://wiki.c2.com/?WagnerFisherAlgorithm)
-
 ## Time Complexity
 
-The time of execution.
+The time of execution
 
 ### Ranking
 
@@ -32,31 +28,23 @@ Remove the constants.
   - If you mapped n^2 and 2n on a graph, 2n would be higher in runtime (y) than n^2 only for smaller input (x). 
   - Eventually they would intersect and n^2 will always be bigger
 
-#### Loops
-
-(only one that matters)
-
-contributes the most to Time Complexity
+Loops contributes the most to Time Complexity
 
 ```python
 for i in range(n):
 # Time Complexity = O(n)
 ```
-#### Insignificant
 
+Insignificant operations to Time Complexity include:
 - Variable Declaration
   - `x = 0`
   - Time Complexity = O(1)
-
 - Arithmetic
   - `x + 1`
   - Time Complexity = O(1)
-
 - Return
   - `return x`
   - Time Complexity = O(1)
-
-#### Example 
 
 ```c++
 int listSum(A,n){          // A->array and n->number of elements in the array 
@@ -66,8 +54,7 @@ int listSum(A,n){          // A->array and n->number of elements in the array
     }
     return sum             // cost=1  no of times=1 
 }
-```
-```text
+/*
 Tsum = function call + for statement + sum arithmetic + return 
 
 function call = 1
@@ -81,6 +68,7 @@ return = 1
 Tsum = 1 + 2*(n+1) + 2*n + 1 = 4n + 1 
      = C1 * n + C2
      = O(n)
+*/
 ```
 
 ### O(1)
@@ -89,31 +77,34 @@ Number of operations is constant relative to the input size.
 
 USUALLY access is instant.
 
-Not always fast, there could be 1000 operations and the time complexity could still be O(1).
+Not always fast, there could be 1000 operations and the time complexity could still be O(1). O(1) just means that it will only be 1000 operations regardless of the input size.
 
-### O(2n)
+### O(2n) 
 
-2 n's
+Visualize
+- 2 n's
 
-
- _ | _ | _ | _ | _
----------|----------|---------|---------|---------
- n | n | n | n | n
- n | n | n | n | n 
+| | | | | |
+|---------|----------|---------|---------|---------|
+| n | n | n | n | n |
+| n | n | n | n | n | 
 
 ### O(n^2)
 
-For every n is a n (square)
+Visualize
+- n squared
+- For every n is a n
+- n n's
 
-_ | _ | _ | _ | _
----------|----------|---------|---------|----------
- n | n | n | n | n
- n | n | n | n | n
- n | n | n | n | n
- n | n | n | n | n
- n | n | n | n | n
+| n | = | 5 |  | |
+|---------|----------|---------|---------|----------|
+| n | n | n | n | n |
+| n | n | n | n | n |
+| n | n | n | n | n |
+| n | n | n | n | n |
+| n | n | n | n | n |
 
-### Amortized
+### Ω | Amortized
 
 Average time per operation
 - Used to ensure the average performance is acceptable, even if some individual operations might take longer
@@ -278,7 +269,9 @@ i.e. dont create another array for storing values, just edit the existing array
 3) Move the data at `R` to `L` when condition is met
    `if(myList[L] != myList[R])`
 4) BE CAREFUL how you update `L`
-   - Keep in mind if `L` starts at 0, +1 for the length of L elements 
+   - is `L` a length or an index?
+   - Should you update `L-1` (length) or `L`(index)?
+   - Should you return `L` (length) or `L+1`(index)?
 
 ### Get min
 
@@ -375,3 +368,9 @@ class Solution:
         print(new_head)
         return new_head
 ```
+
+## Other Algorithms
+
+### Diff algorithms
+
+[Wagner Fisher Algorithm](http://wiki.c2.com/?WagnerFisherAlgorithm)
