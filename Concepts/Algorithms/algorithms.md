@@ -10,6 +10,7 @@ The time of execution
 
 ### Ranking
 
+```text
 --BEST--
 O(1)
 O(logn)
@@ -20,13 +21,14 @@ O(n^3)
 O(a^n)
 O(n!)
 --WORST--
+```
 
 ### Calculate
 
-Remove the constants.
+Remove the constants used in addition, subtraction, and multiplication
 - We dont care about constants because constants only matter at smaller inputs which are insignificant to our CPU.
-  - If you mapped n^2 and 2n on a graph, 2n would be higher in runtime (y) than n^2 only for smaller input (x). 
-  - Eventually they would intersect and n^2 will always be bigger
+  - If you mapped n^2 and 2n on a graph, 2n would be higher in runtime (y) only for smaller input (x). Eventually they would intersect and n^2 will always be bigger. See graph below.
+  ![Constant Graph](assets/constants-graph.png)
 
 Loops contributes the most to Time Complexity
 
@@ -46,6 +48,7 @@ Insignificant operations to Time Complexity include:
   - `return x`
   - Time Complexity = O(1)
 
+C++ Example
 ```c++
 int listSum(A,n){          // A->array and n->number of elements in the array 
     total = 0              // cost=1  no of times=1 

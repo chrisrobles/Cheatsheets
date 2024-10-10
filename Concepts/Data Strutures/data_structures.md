@@ -66,18 +66,18 @@ def deleteMiddle(arr, i):
 
 ### Dynamic Arrays
 
-Can change size. (Dont need their size specified.)
+Can change size and keeps track of the last element in the array with a pointer
 
-Default in *loosely typed languages*.
+Default in *loosely typed languages*
 - Python
 - PHP
 - JS
 
 #### Complexity
 
-| Read | Insertion                                                        | Deletion                                                              |
-|------|------------------------------------------------------------------|-----------------------------------------------------------------------|
-| O(1) | Ends: Amortized O(1)<br/>Middle: O(n) | Ends: Amortized O(1)<br/>Middle: O(n) |
+| Read | Insert / Delete Ends | Insert / Delete Middle |
+| --- | --- | --- |
+| O(1) | Amortized Ω(1) | O(n) |
 
 > Amortized - average time per operation
 > > Use to ensure the average performance is acceptable, even if some individual operations might take longer
@@ -86,12 +86,14 @@ Default in *loosely typed languages*.
 
 When the array gets too big for its allocation, it reallocates a bigger array (usually double) in memory. (Also it deallocates the old array.)
 
-Reallocating happens so infrequently the O(n) time complexity for reallocating isnt really a concern. So, the amortized complexity (average) of pushing to the end of an array is still O(1).
+Reallocating happens so infrequently the O(n) time complexity for reallocating isnt really a concern. So, the amortized complexity (average) of pushing to the end of an array is still Ω(1).
+
+The fact that reallocating happens so infrequently so its not worth worrying about is proven using [Power Series](https://medium.com/@erkmenefe/a-comprehensive-guide-to-arrays-understanding-static-dynamic-arrays-and-ram-storage-255226aed0c7).
 
 #### Example
 
 ```python
-class DynamicArray:
+class DynamicArray: 
     
     def __init__(self, capacity: int):
         self.arr = [0] * capacity
