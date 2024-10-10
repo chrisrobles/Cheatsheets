@@ -123,7 +123,7 @@ class DynamicArray:
         self.arr = self.arr + [0]*self.capacity
         self.capacity *= 2
 
-    def getSize(self) -> int:
+    def getLength(self) -> int:
        return self.length
 
     def getCapacity(self) -> int:
