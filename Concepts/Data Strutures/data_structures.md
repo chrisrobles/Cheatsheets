@@ -134,17 +134,22 @@ class DynamicArray:
 
 LIFO - Last in First out
 
-*use list*
-
-<mark>Stack should be empty at end to be valid</mark>
+Tips:
+- Implement with list
+- If keeping track of properties of the data in the stack (min, etc.), consider creating a second stack to track the property as the stack updates.
+  - Every time you push to the main stack, push to the second stack.
+  - That way you have the property(minimum) at each state of the stack.
+  - If you just kept track of the minimum, once the minimum got popped you would have to do O(n) operations to find the minimum again vs. if you just popped from the minimum stack.
 
 Useful to:
 - reverse sequences
   - recursion goes in reverse because it pops off the call stack
-- Pre / Post Order Operations (56+)
+
+Examples:
+- Pre / Post Order Operations (56+ i.e. 5 + 6)
 - Work on to do list by starting with smallest task
 
-### Operations & Complexity
+### Complexity
 
 | Push       | Pop             | Peek          |
 |------------|-----------------|---------------|
