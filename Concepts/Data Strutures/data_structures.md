@@ -151,99 +151,104 @@ Examples:
 
 ### Complexity
 
-| Push       | Pop             | Peek          |
-|------------|-----------------|---------------|
+| Push | Pop | Peek |
+| --- | --- | --- |
 | Add to top | Remove from top | Read from top |
 | O(1)       | O(1)            | O(1)          |
 
 ## Linked List
 
 Ordered sequence of nodes w/ a value and next pointer
-- stored randomly in memory
 
-<mark> DONT THINK OF A LINKED LIST AS AN ARRAY</mark>
+Tips:
+- <mark>DONT THINK OF A LINKED LIST AS AN ARRAY</mark>
+  - focus on each node as an individual
+  - non-contiguous
+  - stored randomly in RAM
+- Create a dummy node at head and just return head.next
+  - This allows you to avoid checking if a linked list is empty when point .next to it
 
-- focus on each node as an individual
+Useful To:
+- Insertion and deletion
+
+Examples:
+- Power Point slideshow easy insert in the middle
 
 ### Complexity
 
-| Read | Insert | Delete |
-|------|--------|--------|
-| O(n) | O(1)   | O(1)   |
+| Access | Search | Insert | Delete |
+| --- | --- | --- | --- |
+| O(n) | O(n) | O(1) | O(1) |
 
-### List Node Example
+### Code
 
 ```python
 class Node:
-    def __init__(self, val):
+    def __init__(self, val: int):
         self.val = val
         self.next = None
-```
-
-### Linked List Example
-
-```python
 class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-    def get(self, index: int) -> int:
-        cur = self.head
-        if not cur:
-            return -1
-        while index:
-            if not cur.next:
-                return -1
-            cur = cur.next
-            index -= 1
-        return cur.val
+    def get(self, i: int) -> int:
+        curr = self.head
+        while curr and i:
+            i -= 1
+            curr = curr.next
+        if curr:
+            return curr.val
+        return -1
     def insertHead(self, val: int) -> None:
-        new = Node(val)
-        new.next = self.head
-        if not self.head:
-            self.tail = new
-        self.head = new
+        tmp = self.head
+        self.head = Node(val)
+        self.head.next = tmp
+        if not self.tail:
+            self.tail = self.head
     def insertTail(self, val: int) -> None:
-        new = Node(val)
+        tmp = Node(val)
         if self.tail:
-            self.tail.next = new
-        else:
-            self.head = new
-        self.tail = new
-        print(self.tail.val)
-    def remove(self, index: int) -> bool:
-        cur = self.head
-        prev = None
-        if not cur:
+            self.tail.next = tmp
+        self.tail = tmp
+        if not self.head:
+            self.head = self.tail
+    def remove(self, i: int) -> bool:
+        prev, curr = None, self.head
+        while curr and i:
+            i -= 1
+            prev = curr
+            curr = curr.next
+        if not curr: # Index out of bounds
             return False
-        while index:
-            if not cur.next:
-                return False
-            prev = cur
-            cur = cur.next
-            index -= 1
-        if prev:
-            if cur == self.tail:
-                self.tail = prev
-            prev.next = prev.next.next
-        elif self.head:
+        # Guaranteed to be 1 length
+        if not curr.next: # Tail
+            self.tail = prev
+        if not prev: # Head
             self.head = self.head.next
+        else:
+            prev.next  = prev.next.next
         return True
     def getValues(self) -> List[int]:
-        arr = []
-        cur = self.head
-        while cur:
-            arr.append(cur.val)
-            cur = cur.next
-        return arr
+        myList = []
+        curr = self.head
+        while curr:
+            myList.append(curr.val)
+            curr = curr.next
+        return myList
 ```
 
 ## Doubly Linked List
 
 Linked list with an added `prev` pointer
 
+Tips:
+- f
+
 Useful to:
 - build stack
+
+Examples:
+- f
 
 ### Time Complexity
 
