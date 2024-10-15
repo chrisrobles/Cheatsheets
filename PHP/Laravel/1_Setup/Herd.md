@@ -2,7 +2,7 @@
 
 [Documentation](https://herd.laravel.com/docs/1/getting-started/sites?ref=herd)
 
-Laravel and PHP development environment that includes everything needed to get started with Laravel ([and other](https://herd.laravel.com/docs/1/extending-herd/supported-frameworks)) development
+Laravel and PHP development environment that includes everything needed to get started with Laravel ([and other](https://herd.laravel.com/docs/1/extending-herd/supported-frameworks)) framework development
 
 Hosts projects at `~/Herd/my-project` and can access the site by going to its `.test` domain as so `my-project.test`
 
