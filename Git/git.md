@@ -1,5 +1,14 @@
 # Git
 
+## Find settings
+
+`git config --list --show-origin`
+
+## Change Identity
+
+`git config --global user.name ["chris"]`
+`git config --global user.email [chris@example.com]`
+
 ## Clone a repository with HTTPS
 
 `git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
@@ -31,14 +40,14 @@
 
     Linux: `cat ~/.ssh/id_ed25519.pub | xclip -selection clipboard`
 
-    WSL: `cat ~/.ssh/id_ed25519.pub | clip.exe`
+    WSL / Git Windows: `cat ~/.ssh/id_ed25519.pub | clip.exe`
 
 5) Add ssh key to remote repository
 
    - GitHub
-      1. [Go to SSH and GPG keys under "Access" in profile settings](https://github.com/settings/profile)
-      2. Paste in ssh key
-      3. Add SSH key
+      1. Go to [SSH and GPG keys](https://github.com/settings/keys) under "Access" in profile settings
+      2. Click `New SSH key`
+      3. Paste SSH key in `Key`
 
 ### in Mac
 
