@@ -8,7 +8,17 @@ Tips:
 - follows indentation to separate code blocks instead of flower brackets `{}`
 - dynamically typed
 
-## Starting Point for Script
+## REPL
+
+`$ python`
+`>>> print("hello world")`
+`hello world`
+
+Read, Evaluate, Print, and Loop Python code using direct communication with the Python Interpreter
+
+i.e. type in Python code and get the results displayed immediately
+
+## Boilerplate
 
 ```python
 # defined starting point
