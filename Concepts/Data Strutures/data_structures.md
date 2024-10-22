@@ -6,9 +6,14 @@
 
 Ordered, contiguous group of elements.
 
+Tips:
+- f
+
 Useful to:
-- Access something with a known location instantly
+- Instant access
 - Add to the end of a ds(stack)
+
+Examples:
 
 ### Static Arrays
 
@@ -242,13 +247,16 @@ class LinkedList:
 Linked list with an added `prev` pointer
 
 Tips:
-- f
+- 
 
 Useful to:
+- insert in the middle O(1)
+  - however, finding the middle is O(n) so it is still better to use an array because it has O(1) look up time
 - build stack
+  - better to use array
 
 Examples:
-- f
+- 
 
 ### Time Complexity
 
