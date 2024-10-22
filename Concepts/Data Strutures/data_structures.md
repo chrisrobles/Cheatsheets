@@ -181,7 +181,7 @@ Examples:
 
 ### Complexity
 
-| Access | Search | Insert | Delete |
+| Access | Search | Insert at known | Delete at known |
 | --- | --- | --- | --- |
 | O(n) | O(n) | O(1) | O(1) |
 
@@ -247,7 +247,8 @@ class LinkedList:
 Linked list with an added `prev` pointer
 
 Tips:
-- 
+- Dont forget to update head, tail, prev, AND next
+- Dont forget to handle an empty list
 
 Useful to:
 - insert in the middle O(1)
@@ -256,16 +257,16 @@ Useful to:
   - better to use array
 
 Examples:
-- 
+- Alternate implementation for Stacks because of the O(1) insert and delete at the end
+  - Arrays are also O(1) and provide instant access so array's are still better
 
-### Time Complexity
+### Complexity
 
-Access: O(n)
-Search: O(n)
-Insertion at known: O(1)
-Deletion at known: O(1)
+| Access | Search | Insertion at known | Deletion at known |
+| --- | --- | --- | ---|
+| O(n) | O(n) | O(1) | O(1) |
 
-### Example
+### Code with Length
 
 ```python
 
@@ -396,6 +397,88 @@ obj.addAtIndex(6,3)
 obj.deleteAtIndex(7)
 obj.deleteAtIndex(5)
 obj.addAtTail(4)
+```
+
+### Code w/o Length
+
+```python
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+        self.prev = None
+class MyLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def get(self, index: int) -> int:
+        curr = self.head
+        if index < 0:
+            return -1
+        while curr and index:
+            index -= 1
+            curr = curr.next
+        if curr:
+           return curr.val
+        return -1
+
+    def addAtHead(self, val: int) -> None:
+        node = Node(val)
+        node.next = self.head
+        if self.head:
+            self.head.prev = node
+        self.head = node
+        if not self.tail:
+            self.tail = node
+
+    def addAtTail(self, val: int) -> None:
+        node = Node(val)
+        node.prev = self.tail
+        if self.tail:
+            self.tail.next = node
+        self.tail = node
+        if not self.head:
+            self.head = node
+
+    def addAtIndex(self, index: int, val: int) -> None:
+        if index < 0:
+            return
+        if index == 0:
+            self.addAtHead(val)
+            return
+        # Add a temp node so we can add at the tail
+        self.addAtHead(-1)
+        curr = self.head
+        while curr and index:
+            curr = curr.next
+            index -= 1
+        if curr and not curr.next:
+            self.addAtTail(val)
+        elif curr:
+            # Add after curr
+            node = Node(val)
+            node.prev = curr
+            node.next = curr.next
+            curr.next.prev = node
+            curr.next = node
+        # Remove temp node
+        self.deleteAtIndex(0)
+
+    def deleteAtIndex(self, index: int) -> None:
+        curr = self.head
+        while curr and index:
+            curr = curr.next
+            index -= 1
+        if curr:
+            if curr == self.head:
+                self.head = self.head.next
+            if curr == self.tail:
+                self.tail = self.tail.prev
+            if curr.prev:
+                curr.prev.next = curr.next
+            if curr.next:
+                curr.next.prev = curr.prev
 ```
 
 ## Queues

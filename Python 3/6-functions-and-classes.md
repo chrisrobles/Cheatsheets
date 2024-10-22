@@ -1,5 +1,6 @@
 # Functions and Classes
 
+
 ## Functions
 
 ```python
@@ -313,3 +314,41 @@ class Teacher(Person):  # Teacher extends Person
   - `callable(object)`
   - True if object has `__call__()` method
   - Classes are callable by default
+
+## Docstring
+
+Document functions and classes
+
+```python
+def func(val: int) -> None:
+  """
+  Description
+  
+  :param val: Description
+  :type val: int
+  :rtype: void
+  """
+```
+
+### Common Types in Docstrings
+
+1. Basic Types:
+   - int: Integer
+   - float: Floating-point number
+   - str: String
+   - bool: Boolean
+   - None: Represents the absence of a value (void)
+
+2. Collection Types:
+   - list: List of items
+   - tuple: Tuple of items
+   - dict: Dictionary (key-value pairs)
+   - set: Set of unique items
+
+3. Special Types:
+   - Any: Any type
+   - Optional[type]: A type that can also be **None**
+   - Union[type1, type2, ...]: A value that can be one of several types
+
+4. Custom Types:
+   - You can also specify custom class types.
