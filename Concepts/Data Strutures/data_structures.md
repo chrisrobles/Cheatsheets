@@ -259,6 +259,7 @@ Useful to:
 Examples:
 - Alternate implementation for Stacks because of the O(1) insert and delete at the end
   - Arrays are also O(1) and provide instant access so array's are still better
+- Web browser with ability to go forward and backward
 
 ### Complexity
 
@@ -323,8 +324,6 @@ class MyLinkedList:
     def addAtIndex(self, index: int, val: int) -> None:
         if index < 0 or index > self.length:
             return
-        if(index == 4 and val == 3):
-            print(self.length)
         if index == self.length:
             self.addAtTail(val)
             return
