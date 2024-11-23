@@ -271,10 +271,6 @@ i.e. dont create another array for storing values, just edit the existing array
    `for R in range(len(myList))`
 3) Move the data at `R` to `L` when condition is met
    `if(myList[L] != myList[R])`
-4) BE CAREFUL how you update `L`
-   - is `L` a length or an index?
-   - Should you update `L-1` (length) or `L`(index)?
-   - Should you return `L` (length) or `L+1`(index)?
 
 ### Get min
 

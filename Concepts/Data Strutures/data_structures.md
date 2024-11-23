@@ -1,19 +1,21 @@
 # Data Structures
 
 > A way to store data in an efficient manner inside of RAM
-
 ## Array
 
 Ordered, contiguous group of elements.
 
 Tips:
-- f
+- Insertion and deletion can be costly (O(n) time complexity) if not at the end
 
 Useful to:
 - Instant access
 - Add to the end of a ds(stack)
 
 Examples:
+- Storing a list of student names in a classroom.
+- Keeping track of a sequence of tasks in a to-do list.
+- Managing a collection of items in a shopping cart.
 
 ### Static Arrays
 
