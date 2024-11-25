@@ -176,7 +176,7 @@ li.index(5)         # => 0 # returns index of value
 
 # Slice
 # [start:until:step]
-li[1:3]             # => [6,7
+li[1:3]             # => [6,7]
 li[2:]              # => [7,8]
 li[:3]              # => [5,6,7] 
 li[::2]             # => [5, 7]

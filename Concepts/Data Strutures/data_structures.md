@@ -1,16 +1,17 @@
 # Data Structures
 
 > A way to store data in an efficient manner inside of RAM
+
 ## Array
 
 Ordered, contiguous group of elements.
 
-Tips:
-- Insertion and deletion can be costly (O(n) time complexity) if not at the end
-
 Useful to:
 - Instant access
 - Add to the end of a ds(stack)
+
+Tips:
+- Insertion and deletion can be costly (O(n) time complexity) if not at the end
 
 Examples:
 - Storing a list of student names in a classroom.
@@ -141,20 +142,19 @@ class DynamicArray:
 
 LIFO - Last in First out
 
-Tips:
-- Implement with list
-- If keeping track of properties of the data in the stack (min, etc.), consider creating a second stack to track the property as the stack updates.
-  - Every time you push to the main stack, push to the second stack.
-  - That way you have the property(minimum) at each state of the stack.
-  - If you just kept track of the minimum, once the minimum got popped you would have to do O(n) operations to find the minimum again vs. if you just popped from the minimum stack.
-
 Useful to:
 - reverse sequences
   - recursion goes in reverse because it pops off the call stack
 
+Tips:
+- Implement with list
+- For O(1) keeping track of properties of the the stack (min, etc.) create a second stack to track the property as the stack updates (i.e. a stack that keeps track of the state of the property at each level of the stack)
+  - Push to the main stack, push to the second stack.
+  - If you just kept track of the property (ex. minimum), once the minimum got popped you would have to do O(n) operations to find the minimum again
+
 Examples:
 - Pre / Post Order Operations (56+ i.e. 5 + 6)
-- Work on to do list by starting with smallest task
+- Work on to do list by starting with smallest subtask
 
 ### Complexity
 
@@ -167,16 +167,16 @@ Examples:
 
 Ordered sequence of nodes w/ a value and next pointer
 
+Useful To:
+- Insert and delete O(1)
+
 Tips:
 - <mark>DONT THINK OF A LINKED LIST AS AN ARRAY</mark>
   - focus on each node as an individual
   - non-contiguous
   - stored randomly in RAM
 - Create a dummy node at head and just return head.next
-  - This allows you to avoid checking if a linked list is empty when point .next to it
-
-Useful To:
-- Insertion and deletion
+  - This is useful to avoid checking if a linked list is empty when point .next to it
 
 Examples:
 - Power Point slideshow easy insert in the middle
@@ -249,18 +249,23 @@ class LinkedList:
 Linked list with an added `prev` pointer
 
 Tips:
-- Dont forget to update head, tail, prev, AND next
-- Dont forget to handle an empty list
+- Dont forget to update 
+  - head
+  - tail
+  - prev
+  - next
+- Dont forget to handle an empty list (head and tail is null)
 
 Useful to:
 - insert in the middle O(1)
-  - however, finding the middle is O(n) so it is still better to use an array because it has O(1) look up time
-- build stack
-  - better to use array
+  - however, finding the middle is O(n) so it is 
+  - still better to use an array
+    - O(1) look up time
+- build stack (O(1) insert and delete at the)
+  - still better to use an array
+    - O(1) look up time
 
 Examples:
-- Alternate implementation for Stacks because of the O(1) insert and delete at the end
-  - Arrays are also O(1) and provide instant access so array's are still better
 - Web browser with ability to go forward and backward
 
 ### Complexity

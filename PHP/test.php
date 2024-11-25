@@ -1,5 +1,4 @@
 <?php
-<?php
 /**
  *
  * This script sets up a PHP environment for debugging, autoloading classes, and starting a session.
