@@ -2,6 +2,10 @@
 
 > A way to store data in an efficient manner inside of RAM
 
+Useful To:
+Tips:
+Examples:
+
 ## Array
 
 Ordered, contiguous group of elements.
@@ -11,7 +15,7 @@ Useful to:
 - Add to the end of a ds(stack)
 
 Tips:
-- Insertion and deletion can be costly (O(n) time complexity) if not at the end
+- Insertion and deletion can be costly (O(n) time complexity) if not at the end because it has to shift everything
 
 Examples:
 - Storing a list of student names in a classroom.
@@ -248,14 +252,6 @@ class LinkedList:
 
 Linked list with an added `prev` pointer
 
-Tips:
-- Dont forget to update 
-  - head
-  - tail
-  - prev
-  - next
-- Dont forget to handle an empty list (head and tail is null)
-
 Useful to:
 - insert in the middle O(1)
   - however, finding the middle is O(n) so it is 
@@ -264,6 +260,14 @@ Useful to:
 - build stack (O(1) insert and delete at the)
   - still better to use an array
     - O(1) look up time
+
+Tips:
+- Dont forget to update 
+  - head
+  - tail
+  - prev
+  - next
+- Dont forget to handle an empty list (head and tail is null)
 
 Examples:
 - Web browser with ability to go forward and backward
@@ -489,16 +493,21 @@ class MyLinkedList:
 
 ## Queues
 
-FIFO | "First come first serve"
+FIFO - First in first out
 
-*use linked list*
-
-<mark>Queue should be empty at end to be valid</mark>
-
-Useful for:
+Useful to:
 - Removing from the beginning O(1)
   - Arrays cant do that because it would need to shift everything
 - breadth first search
+
+Tips:
+- use linked lists with head and tail
+- Queue should be empty at end to be valid
+- can be optimized by by directly counting elements or states instead of fully simulating the queue
+- make sure to set head and tail to None on pop
+
+Examples:
+- Line at store
 
 ### Enqueue - O(1)
 
@@ -520,7 +529,6 @@ def enqueue(self, val):
 ### Dequeue - O(1)
 
 Remove from queue at `head`
-- Check it's not empty first
 
 ```python
 def dequeue(self):
@@ -536,11 +544,15 @@ def dequeue(self):
     return val
 ```
 
-## Deque | "deck"
+## Deque 
 
 Double-ended queue
 
+"deck"
+
 Add and remove from both ends
+
+### Code
 
 ```python
 def update_decorator(func):
@@ -643,7 +655,7 @@ myDeq.isEmpty()
 
 ## Binary Tree
 
-### Time Complexity
+### Complexity
 
 1) 1st level is 1 node, 2nd level is 2 nodes, 3rd level there is 4 nodes.
 2) The pattern is the number of nodes is 2x / **doubles** the previous level
