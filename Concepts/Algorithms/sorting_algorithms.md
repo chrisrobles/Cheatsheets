@@ -1,3 +1,54 @@
+# Sorting Algorithms
+
+## Stable vs Unstable
+
+Stable will preserve the relative order when there is a tie
+
+Unstable will not preserve the relative order when there is a tie
+
+## Insertion Sort
+
+(stable)
+
+Inserting a value into the sorted portion of the array
+
+Useful For:
+- Simple quick implementation
+- When data is small
+
+Tips:
+- Break the array from the first element as the sorted portion
+- Repeatedly taking an element from the unsorted portion and insert it into its correct position in the sorted portion of the list
+
+### Complexity
+
+Worst Case
+- O(n^2) - When data is in descending order
+
+Best Case
+- O(n) - When data is already sorted
+
+### Example
+
+```python
+# Iterative
+def insertion_sort(nums: Lis[int]): -> List[int]
+	# Loop through each element
+	for insert in range(1, len(nums)):
+		# Record the end of the sorted portion
+		sorted_end = insert - 1
+		# Swap values until insert number is in the right spot
+		while nums[sorted_end+1] < nums[sorted_end] and sorted_end >= 0:
+			# Swap
+			nums[sorted_end+1], nums[sorted_end] = nums[sorted_end], nums[sorted_end+1]
+			# Move down in the sorted list
+			sorted_end -= 1
+	return nums
+```
+
+## Quicksort
+
+```python3
 # Python program for implementation of Quicksort Sort
 
 # This function takes last element as pivot, places
@@ -80,3 +131,4 @@ print()
 		-pi=part(arr,0,1)
 	-quick(arr,3, 5)
 """
+```

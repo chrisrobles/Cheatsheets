@@ -37,7 +37,9 @@ Use a minimum state stack. Keep track of the minimum state at every entry of inp
 
 **Once one list runs out**, just set the end to the list with stuff still in it
 
-## Queue Simulation
+## Queue
+
+### Queue Simulation
 
 Replace simulation with counting or another mathematical approach
 
@@ -63,7 +65,9 @@ Examples:
 - O(1) insert at ends
 - O(1) insert in middle
 
-## Factorial
+## Recursion
+
+### Factorial
 
 > `5! = 5 * 4 * 3 * 2 * 1`
 
@@ -77,7 +81,7 @@ def factorial(num: int) -> int:
     return num * factorial(num-1)
 ```
 
-## Fibonacci
+### Fibonacci
 
 ```python
 from functools import cache
@@ -89,18 +93,19 @@ def fibonacci(n):
   return fibonacci(n-1) + fibonacci(n-2)
 ```
 
-### Get time complexity 
+#### Get time complexity 
+
+O(2^n) - Geometric series, i.e. each term is all the numbers before it multiplied by the common ratio
 
 This example can help you understand how to get time complexity of a binary tree.
 
-![1714293906454](assets/1714293906454.png)
+![1733445327998](images/leetcode/1733445327998.png)
 
 1) 1st level is 1 node, 2nd level is 2 nodes, 3rd level there is 4 nodes.
 2) The pattern is the number of nodes is 2x / **doubles** the previous level
-3) Double each at each level means multiple by 2 at each level which means **2^n**
-4) Since we have to traverse to the last level, it is **O(n)**
+3) Double at each level means multiple by 2 at each level which means **2^n**
 
-## Reverse Linked List
+### Reverse Linked List
 
 1. Go to the tail of the linked list and start returning to the previous nodes
 2. When returning to the previous nodes, always return the og tail
@@ -108,19 +113,26 @@ This example can help you understand how to get time complexity of a binary tree
 - `head.next.next = head`
 
 ```python3
-# Definition for singly-linked list
+# Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
+# Recursive Solution
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if not (head and head.next): # Only one node (or empty list from the start)
-            return head
-
-        new_head = self.reverseList(head.next) # will always be 5 (the new head of the list)
-        head.next.next = head # the next of head's next, point back at head
-        head.next = None # old head points to None (since it's the end of a list)
-        print(new_head)
-        return new_head
+        # List could be empty, make it base case
+        if head is None:
+            return None
+        # create a variable for the head of this linked list
+        newHead = head
+        # If there is > 1 node turn it into a sub-problem to sort
+        if head.next:
+            # change the head to the new head of the reverse linked list
+            newHead = self.reverseList(head.next)
+            # reverse this node
+            head.next.next = head
+            head.next = None
+        return newHead
 ```

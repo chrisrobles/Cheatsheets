@@ -2,33 +2,33 @@
 
 ## Resources
 
-[Book](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844)
+[Introduction-Algorithms-3rd-MIT-Press](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844)
 
-## Time Complexity
+## Complexity
+
+### Time Complexity
 
 The time of execution
 
-### Ranking
+#### Ranking
 
-```text
---BEST--
-O(1)
-O(logn)
-O(n)
-O(nlogn)
-O(n^2)
-O(n^3)
-O(a^n)
-O(n!)
+| --- | --- |
+| BEST | |
+| O(1) | Think constant time, it's time is not dependent on input size|
+| O(logn) |  |
+| O(n) | Think linear, grows the same as the input grows |
+| O(nlogn) |  |
+| O(n^2) | Think of a square, for every n you have a n |
+| O(a^n) | Think of binary tree 2^n where a node is given 2 options n times |
+| O(n!) | Think exponential |
 --WORST--
-```
 
-### Calculate
+#### Calculate
 
 Remove the constants used in addition, subtraction, and multiplication
 - We dont care about constants because constants only matter at smaller inputs which are insignificant to our CPU.
   - If you mapped n^2 and 2n on a graph, 2n would be higher in runtime (y) only for smaller input (x). Eventually they would intersect and n^2 will always be bigger. See graph below.
-  ![Constant Graph](assets/constants-graph.png)
+  ![Constant Graph](images/algorithms/constants-graph.png)
 
 Loops contributes the most to Time Complexity
 
@@ -74,7 +74,7 @@ Tsum = 1 + 2*(n+1) + 2*n + 1 = 4n + 1
 */
 ```
 
-### O(1)
+#### O(1)
 
 Number of operations is constant relative to the input size.
 
@@ -82,7 +82,7 @@ USUALLY access is instant.
 
 Not always fast, there could be 1000 operations and the time complexity could still be O(1). O(1) just means that it will only be 1000 operations regardless of the input size.
 
-### O(2n) 
+#### O(2n) 
 
 Visualize
 - 2 n's
@@ -92,7 +92,7 @@ Visualize
 | n | n | n | n | n |
 | n | n | n | n | n | 
 
-### O(n^2)
+#### O(n^2)
 
 Visualize
 - n squared
@@ -107,16 +107,28 @@ Visualize
 | n | n | n | n | n |
 | n | n | n | n | n |
 
-### Ω | Amortized
+### Notations
+
+O, Ω (Amortized) and Θ have nothing to do with worst, best and average case of algorithms. 
+
+- Big O (O): Describes an upper bound on the time complexity
+- Big Omega (Ω): Describes a lower bound on the time complexity
+- Big Theta (Θ): Describes a tight bound on the time complexity
+ 
+All three give us a way to express statements about the rate of growth of functions
+
+For example, you can have a lower bound (Omega) on the worst-case time complexity of an algorithm. "The function that describes the worst-case behavior of this algorithm grows **at least** as quickly as the function O(n^2)".
+
+#### Ω | Amortized
 
 Average time per operation
 - Used to ensure the average performance is acceptable, even if some individual operations might take longer
 
-## Space Complexity
+### Space Complexity
 
 *Not as relevant as time complexity* 
 
-### Calculate
+#### Calculate
 
 1. instruction space
 amount of memory used to save the compiled version of instructions
@@ -167,9 +179,9 @@ Useful to:
 
 Tips:
 - Just think of turning the problem into a subproblem one step at a time
-- Return not important
+- Return answer to the subproblem
+  - or return what you want and change by reference
 - Works like stacks, LIFO
-
 
 Examples:
 - Starting with the sub bullet point of a todo list
@@ -183,6 +195,7 @@ O(n) space and complexity
 The O(n) space complexity comes from the method calls getting put into the call stack and if there are n method calls there are n methods in the call stack
 
 ### Top-Down
+
 aka Divisive or Decrease and Conquer or Divide and Conquer
 
 Traditional Recursion, break the problem down into subproblems all the way to the base case and use that to solve the previous problem all the way back up to the original problem.
@@ -214,6 +227,7 @@ Starts with the simplest subproblem (base case), then uses the subproblem to sol
 Bottom-up recursion often uses tabulation to store the results of subproblems in a table (usually an array or a matrix) to ensure that each subproblem is only solve once.
 
 #### Example
+
 ```python
 def fib_bottom_up(n):
   if n <= 1:
@@ -226,8 +240,6 @@ def fib_bottom_up(n):
     table[i] = table[i-1] + table[i-2] #this number is the result of the past 2 numbers
   
   return table[n]
-
-
 ```
 
 #### Top-Down vs Bottom-up
@@ -244,18 +256,6 @@ Bottom-up if:
 - Dynamic Programming
 
 Top-down is easier to implement, but bottom-up is more efficient in time complexity (unless memoization is used for top-down) and in space complexity (tabulation is handled better in memory vs a call-stack can result in stack overflow)
-
-## Sorting Algorithms
-
-### Insertion sort
- 
-Break the arrays into sub-arrays and sort those 
-
-#### Best for
-
-When data is small
-
-## Searching Algorithms
 
 ## Other Algorithms
 
