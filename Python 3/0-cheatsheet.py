@@ -21,6 +21,21 @@ Print
 print("hello", end="!")
 
 """
+Variables
+"""
+
+# Naming Convention
+# snake_case
+
+# Declarations not allowed
+a # => Raise NameError
+
+# Global scope
+x = 5           # global
+def my_func():
+    global y    # global
+
+"""
 Arithmetic Operators
 """
 
@@ -36,57 +51,6 @@ Arithmetic Operators
 -7 % 3        # => 2
 
 """
-Conditional Operators
-"""
-
-not True      # => False
-
-True and True # => False
-True or False # => False
-
-# Boolean treated as primitive
-True + True   # => 2
-False -5      # => -5
-
-"""
-Comparison Operators
-"""
-
-# Equality operator
-# Applies bool() to both sides
-# but returns the original value
-0 and 2       # => 0
--5 or 0       # => -5
-2 or True     # 2
-True or 2     # True
-
-# True and False are actually 1 and 0
-0 == False    # => True
-2 > True      # => True
-2 == True     # => True
-
-# None, 0, and empty evaluate to False
-# All other values are True
-bool("")      # => False
-bool([])      # => False
-bool(4)       # => True
-bool(-1)      # => True
-
-# Chaining for checking range / between
-1 < 2 < 3     # => True
-2 < 3 > 2     # => True
-
-# is vs ==
-# is checks by reference
-# == checks by value
-
-# None is an object, use is for comparison
-"etc" is None  # => False
-
-# Ternary operator
-"yay!" if 0 > 1 else "nay!"
-
-"""
 Conditionals
 """
 
@@ -97,13 +61,66 @@ elif False:
 else:
     print("this will print")
 
+# Ternary operator
+"yay!" if 0 > 1 else "nay!"
+
+"""
+Conditional Operators
+"""
+
+not True      # => False
+
+True and True # Output: True
+True or False # Output: True
+
+# Boolean treated as primitive
+True + True   # => 2
+False -5      # => -5
+
+# Equality operator
+# Applies bool() to both sides
+# but returns the original value
+0 and 2       # => 0
+-5 or 0       # => -5
+2 or True     # 2
+True or 2     # True
+
+# None, 0, and empty evaluate to False
+# All other values are True
+bool(None)    # => False
+bool(0)       # => False
+bool("")      # => False
+bool([])      # => False
+bool(4)       # => True
+bool(-1)      # => True
+
+# True and False are actually 1 and 0
+0 == False    # => True
+2 > True      # => True
+2 == True     # => False
+
+"""
+Comparison Operators
+"""
+
+# Chaining for checking range / between
+1 < 2 < 3     # => True
+2 < 3 > 2     # => True
+
+# == vs is
+# == checks by value
+# is checks by reference
+
+# None is an object, use is for comparison
+"etc" is None  # => False
+
 """
 Loops
 """
 
 # For Loop
 for animal in ["dog", "cat"]:
-    print("{} is a animal").format(animal)
+    print("{} is an animal").format(animal)
 for i, animal in enumerate(["dog", "cat"]):
     print(i, animal) # => 0 dog 1 cat
 for name, position in {"Chris": "Programmer", "Enzo": "Therapist"}:
@@ -116,23 +133,8 @@ range(0, 5, 2)       # => 0 2 4
 # While Loop
 while True:
     print("infinite loop")
-    break
-    continue
-
-"""
-Variables
-"""
-
-# Declarations not allowed
-a # => Raise NameError
-
-# Naming Convention
-# snake_case
-
-# Global scope
-x = 5           # global
-def my_func():
-    global y    # global
+    break # stop the loop
+    continue # continue to the next iteration
 
 """
 Strings
@@ -142,12 +144,13 @@ my_str = """multi
 line
 string"""
 
-# Concat
-"Hello" + "world!"
-"Hello" "world"
+# Concatenation
+"Hello" + " " + "world!" # => "Hello world!"
+"Hello" * 3              # => "HelloHelloHello"
+"Hello" " " "world"      # => "Hello world"
 
 # Index
-"hello"[0] # 'H'
+"Hello"[0] # 'H'
 
 # Length
 len("This is a string") # => 16
@@ -162,35 +165,37 @@ List
 
 li = []
 
-# Append/Insert
-li.append(5)
-li.append(6)
-li.insert(2, 8)     #insert(index, value)
-li.insert(2, 7)
+# append(value)
+li.append(1)        # [1]
+li.append(2)        # [1,2]
+
+# insert(index, value)
+li.insert(2, 8)     # [1,2,8]
+li.insert(2, 7)     # [1,2,7,8]
 
 # Index
-li[0]               # => 99
-li[-1]              # => 5
+li[0]               # => 1
+li[-1]              # => 8
 li[10]              # Raises an IndexError
-li.index(5)         # => 0 # returns index of value
+li.index(8)         # => 3 # returns index of value
 
 # Slice
 # [start:until:step]
-li[1:3]             # => [6,7]
+li[1:3]             # => [2,7]
 li[2:]              # => [7,8]
-li[:3]              # => [5,6,7] 
-li[::2]             # => [5, 7]
-li[::-1]            # => [8,7,6,5] # reverse order
+li[:3]              # => [1,2,7] 
+li[::2]             # => [1,7]
+li[::-1]            # => [8,7,2,1] # reverse order
 
 # Pop/Remove
 li.pop()            # remove from end
-del[2]              # remove by index
+del[1]              # remove by index
 li.remove(7)        # remove by value
 li.remove(7)        # Raises a ValueError
 
 # Check for existence
-
-1 in li
+1 in li     # => True
+li.index(1) # Raises ValueError if not found
 
 """
 Tuples
@@ -198,18 +203,17 @@ Tuples
 
 # Immutable list
 tup = (1,2,3)
-
-# Length of 1 requires ,
-tup = (1,)
-
-# Tuple by default
 4,5,6 # => (4,5,6)
 
+"""
+Iterable Helper Functions
+"""
+
 # Apply function to each value
-list(map(max, [1,2,3], [4,2,1]))           # => [4,2,1]
+map(max, [1,2,3], [4,2,1])           # => [4,2,1]
 
 # Filter out values
-list(filter(lambda x: x > 5, [3,4,5,6,7])) # => [6,7]
+filter(lambda x: x > 5, [3,4,5,6,7] ) # => [6,7]
 
 """
 Dict
