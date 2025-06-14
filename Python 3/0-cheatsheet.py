@@ -11,14 +11,13 @@ Starting Point
 # Execute if main program
 if __name__ == "__main__":
     pass
-    
 
 """
 Print
 """
 
 # Change the end from defaulting to new line
-print("hello", end="!")
+print("hello", end="!") # => hello!
 
 """
 User Input
@@ -125,8 +124,13 @@ Loops
 """
 
 # For Loop
+for i in range(5):
+    print(i)         # => 0 1 2 3 4
+
 for animal in ["dog", "cat"]:
     print("{} is an animal").format(animal)
+    print(animal)
+    2 + 2
 for i, animal in enumerate(["dog", "cat"]):
     print(i, animal) # => 0 dog 1 cat
 for name, position in {"Chris": "Programmer", "Enzo": "Therapist"}:
