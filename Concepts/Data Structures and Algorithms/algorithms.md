@@ -28,7 +28,7 @@ The time of execution
 Remove the constants used in addition, subtraction, and multiplication
 - We dont care about constants because constants only matter at smaller inputs which are insignificant to our CPU.
   - If you mapped n^2 and 2n on a graph, 2n would be higher in runtime (y) only for smaller input (x). Eventually they would intersect and n^2 will always be bigger. See graph below.
-  ![Constant Graph](images/algorithms/constants-graph.png)
+  ![Constant Graph](assets/algorithms/constants-graph.png)
 
 Loops contributes the most to Time Complexity
 

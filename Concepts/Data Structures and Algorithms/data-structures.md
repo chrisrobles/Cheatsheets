@@ -1,10 +1,13 @@
 # Data Structures
 
-> A way to store data in an efficient manner inside of RAM
+> A way to store data inside of RAM
 
+Template
+```text
 Useful To:
 Tips:
 Examples:
+```
 
 ## Array
 

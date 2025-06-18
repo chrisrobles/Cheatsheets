@@ -1,4 +1,6 @@
-# u/emnm47's How To Get A Job™ Speech
+# Find a jobs
+
+## u/emnm47's How To Get A Job™ Speech
 
 Networking is EVERYTHING (or at least a skewed amount) now that apps are online, and it's easy to use filters. You must network to have a chance, unless you're in the top 3% of candidates (those people can toss a resume in and get lots of bites). If you continue to throw applications out there without networking, it is highly unlikely you will get picked up. I will get more into networking later BUT here are some steps for How To Get A Job™:
 
@@ -26,3 +28,9 @@ You can't blindly send off 100 applications online and wait to hear back. You ha
 It’s so easy now to just send off a resume to a position. A single opening could have 100 applicants, and maybe the top 10 get interviews and the top 3 get offers. This is great for those with spectacular resumes - you know the type, who interned at SpaceX, built prosthetics for puppies in their spare time, and tutored underprivileged kids in STEM on the weekends, all while getting stellar grades. These few people look amazing on paper and receive interest from all over the board.
 
 Only a few people can draw interest from resumes alone. That’s when you need that name recognition and a willingness to pull your application and take a look at it. If you can get someone to actually look at it, you have a big advantage.
+
+## Recreate a company's product
+
+Cold calls clearly arent working for finding jobs.
+
+So recreate their product or a section of their product and present it to their recruiters / tech managers / CEO
