@@ -6,25 +6,34 @@ Allows to create multiple Python environments with different modules and package
 
 **Recommended that you always use Python virtual environments and not install additional Python packages direct into your Python installation**
 
-- Windows:
-  1) `py -3 -m venv .venv`
-  2) `.venv\scripts\activate`
-  3) if "Activate.ps1...", change PowerShell execution policy to allow scripts to run
-      1) Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-- macOS/Linux:
-  1) `python3 -m venv .venv`
-  2) `source .venv/bin/activate`
-- VSCode
-  - Prompted when a new virtual environment created:
-    - "Set as default for your workspace folder?"
-    - If yes, Environment automatically activated when you open a new terminal
-  - **Set environment as python interpreter**
+New virtual environment
+1. Create a virtual environment
+   - Windows:
+     1) `py -3 -m venv .venv`
+     2) `.venv\scripts\activate`
+     3) if "Activate.ps1...", change PowerShell execution policy to allow scripts to run
+         1) Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+   - macOS/Linux:
+     1) `python3 -m venv .venv`
+     2) `source .venv/bin/activate`
+2. Install packages inside venv
+3. Add `.venv/` to .gitignore
+4. Create list of dependencies
+   - `pip freeze > requirements.txt`
+
+Existing virtual environment
+1. `python -m venv venv`
+2. `source venv/bin/activate`
+3. `pip install -r requirements.txt`
+
+VSCode
+- Prompted when a new virtual environment created "Set as default for your workspace folder?"
+- If yes, Environment automatically activated when you open a new terminal
 
 ### Commands
 
 - deactivate
     `$ deactivate`
-
 
 ## Standard Library | stl
 
