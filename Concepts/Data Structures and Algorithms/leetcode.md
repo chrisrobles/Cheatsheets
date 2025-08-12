@@ -154,7 +154,7 @@ O(2^n) - Geometric series, i.e. each term is all the numbers before it multiplie
 
 This example can help you understand how to get time complexity of a binary tree.
 
-![1733445327998](images/leetcode/1733445327998.png)
+![1733445327998](assets/leetcode/1733445327998.png)
 
 1) 1st level is 1 node, 2nd level is 2 nodes, 3rd level there is 4 nodes.
 2) The pattern is the number of nodes is 2x / **doubles** the previous level

@@ -1,16 +1,21 @@
-# RAM
+# Random Access Memory
 
-Random Access Memory
+Volatile memory of a computer that stores values
 
 ![img.png](assets/ram.png)
 
-Stores values at certain addresses
-
 ## Address
 
-- Stores a byte value
-- 4 bytes apart
-  - Since one int is 4 bytes
+Each byte in RAM has an address
+
+Data can take up more than one address depending on the size of the data type
+- int
+  - 4 bytes
+- char
+  - 1 byte
+
+When finding the next value in RAM, the address is incremented by the size of the data type.
+- ex. first int at `$0` and the next int at `$4`
 
 `0x00` beginning address in hex
 

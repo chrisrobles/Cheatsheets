@@ -12,6 +12,14 @@ Pass statements and metadata called **claims**
 
 ### Datamuse - Word-finding
 
+### Foursquare
+
+### OpenWeather
+
+### Google Maps
+
+### Datamuse - Word-finding
+
 <https://datamuse.com/api>
 
 Word-finding query engine

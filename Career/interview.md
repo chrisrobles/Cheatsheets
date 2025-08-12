@@ -1,6 +1,6 @@
 # Interview
 
-## Behavioral
+## Behavioral Sample Questions
 
 How you have applied your skills in a real-world context
 
