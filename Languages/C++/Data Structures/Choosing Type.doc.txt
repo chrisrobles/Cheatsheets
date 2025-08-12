@@ -1,0 +1,73 @@
+Array:
+Need access the elements using the index.
+Know the size of the array before defining the memory.
+Speed when iterating through all the elements in the sequence.
+Array takes less memory compare than linked list.
+
+Linked List:
+When the developer needs constant time for insertion and deletion.
+When the data dynamically grows.
+Do not access random elements from the linked list.
+Insert the element in any position of the list.
+
+Circular Linked List:
+Develop the buffer memory.
+Represent a deck of cards in a game.
+Browser cache which allows to hit the BACK button.
+Implement Most Recently Used (MRU) list.
+Undo functionality in Photoshop or Word.
+
+Doubly Linked List:
+Easier to delete the node from doubly linked list.
+Can be iterated in reverse order without recursion implementation.
+Insert or remove from double-linked lists faster.
+
+Binary Tree:
+Find name in the phone book.
+Sorted traversal of the tree.
+Find the next closest element.
+Find all elements less than or greater than a certain value.
+
+Binary Search Tree:
+Binary Search Trees are memory-efficient.
+Use when the data need to be sorted.
+Search can be done for a range of values.
+Height balancing helps to reduce the running time.
+
+Hashing:
+Can be used in all situations and performs extremely well
+Constant time operation.
+Inserts are generally slow, reads are faster than trees.
+Hashing is used so that searching a database can be done more efficiently.
+Internet routers use hash tables to route the data from one computer to another.
+Internet search engine uses hash function effectively.
+
+Stack:
+Expression evaluation and syntax parsing.
+Finding the correct path in a maze using backtracking.
+Runtime memory management.
+Recursion function.
+
+Queue:
+Use queue when the developer wants an order.
+Processed in First In First Out order.
+If the developer wants to add or remove both ends, they can use the queue or a double-ended queue.
+
+Heap:
+Implement Priority Queue.
+whenever the developer want quick access to the largest (or smallest) item.
+Good for selection algorithms (finding the min or max).
+Operations tend to be faster than for a binary tree.
+Heap sort sorting methods being in-place and with no quadratic worst-case scenarios.
+Graph algorithms are using heaps as internal traversal data structures, run time will be reduced by polynomial order.
+
+Graph:
+Networks have many uses in the practical side of graph theory.
+Finding the shortest path between the cities.
+Solve maze game.
+Find the optimized route between the cities.
+
+Matrix:
+Matrix arithmetic in graphic processing algorithms.
+Represent the graph.
+Represent quadratic forms and linear algebra solution.

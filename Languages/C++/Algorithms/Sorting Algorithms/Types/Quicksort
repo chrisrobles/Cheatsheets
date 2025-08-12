@@ -1,0 +1,8 @@
+divide and conquer
+
+Stable: No
+
+Time Complexity:
+Best Case: O(nlog(n))
+Worst Case: O(n^2)
+Average Case: O(nlog(n))
