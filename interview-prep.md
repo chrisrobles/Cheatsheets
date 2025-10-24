@@ -2,10 +2,24 @@
 
 ## Algorithms
 
-### Search
+### Sort
+
+Insert Sort
+```python
+"""
+1. Iteratively work through array
+2. Sort each element one at a time
+Use: O(n)/O(n^2) - Mostly sorted data / data continously streaming in
+"""
+```
 
 Merge Sort
 ```python
+"""
+1. Recursively split in half until size 1 sub-array
+2. Merge L and R half
+Use: O(nlogn) - consistentcy
+"""
 # Definition for a pair.
 # class Pair:
 #     def __init__(self, key: int, value: str):
@@ -49,3 +63,5 @@ class Solution:
         return pairs
 
 ```
+
+### Search
