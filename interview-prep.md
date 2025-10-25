@@ -91,7 +91,7 @@ Quick Sort
 1. Choose pivot
 2. Move to <= and > with pivot in middle
 3. Sort L and R
-Use For:
+Use For: Fast and In-place (so good for large datasets / memory constrained environments)
 """
 # Definition for a pair.
 # class Pair:
@@ -138,5 +138,28 @@ class Solution:
 ```
 
 Bucket Sort
+```python
+"""
+1. Create array for range of values
+2. First pass through array and update count of each value
+3. Second pass through array and sort values
+Use for: know range of values
+def bucketSort(arr):
+    # Assuming arr only contains 0, 1 or 2
+    counts = [0, 0, 0]
 
+    # Count the quantity of each val in arr
+    for n in arr:
+        counts[n] += 1
+    
+    # Fill each bucket in the original array
+    i = 0
+    for n in range(len(counts)):
+        for j in range(counts[n]):
+            arr[i] = n
+            i += 1
+    return arr
+
+"""
+```
 ### Search
