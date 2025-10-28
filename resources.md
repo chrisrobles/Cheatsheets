@@ -1,17 +1,33 @@
-CS Links
-Languages
-C++
+# CS Links
+
+## Coding Interview
+http://codingntechinterview.blogspot.com/p/java.html
+https://github.com/yangshun/tech-interview-handbook
+https://interviewing.io/?urc=DMCa
+https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems
+http://www.crackingthecodinginterview.com/
+https://github.com/kdn251/interviews
+https://www.geeksforgeeks.org/amazon-interview-preparation/
+[Practice Interviews](https://www.hellointerview.com/)
+
+## PRACTICE PRACTICE PRACTICE
+https://leetcode.com/
+https://www.hackerearth.com/
+https://www.codewars.com/
+
+## Languages
+### C++
 http://www.cplusplus.com/
 https://jtdaugh.github.io/xcode-umich/
 https://courses.cs.washington.edu/courses/cse326/00wi/unix/g++.html
 https://www.toptal.com/c-plus-plus/top-10-common-c-plus-plus-developer-mistakes
 https://en.cppreference.com/w/cpp/header
 https://isocpp.org/wiki/faq/references#refs-vs-ptrs
-Pointers
+#### Pointers
 https://karwin.blogspot.com/2012/11/c-pointers-explained-really.html
 http://web.eecs.utk.edu/~jplank/plank/classes/cs140/Notes/Pointers/index.html
 http://www.cplusplus.com/
-Java
+### Java
 http://www.oracle.com/technetwork/java/javase/downloads/index.html
 https://www.youtube.com/user/java
 https://www.youtube.com/user/thenewboston
@@ -26,11 +42,11 @@ http://www.vogella.com/tutorials/JavaIntroduction/article.html
 http://www.bluej.org/
 https://eclipse.org/
 http://mindprod.com/jgloss/jcheat.html
-Assembly
+### Assembly
 https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
 http://alumni.cs.ucr.edu/~vladimir/cs161/mips.html
 https://www.eg.bucknell.edu/~csci320/mips_web/
-CS Java
+### CS Java
 http://www.oracle.com/technetwork/java/javase/downloads/index.html
 https://www.youtube.com/user/java
 https://www.youtube.com/user/thenewboston
@@ -47,14 +63,13 @@ http://www.vogella.com/tutorials/JavaIntroduction/article.html
 http://www.bluej.org/
 https://netbeans.org/
 https://eclipse.org/
-End Project
-
+### End Project
 http://ricskopf.digitaltrip.hu/JavaSoftwareStructures3rdEdition.pdf
 http://mindprod.com/jgloss/jcheat.html
-Ruby
+### Ruby
 https://www.techotopia.com/index.php/Ruby_Essentials
 https://poignant.guide/book/chapter-2.html
-Python
+### Python
 https://hackr.io/tutorials/learn-python
 https://developers.google.com/edu/python/?csw=1
 http://programming-motherfucker.com/become.html#Python
@@ -68,14 +83,14 @@ https://www.geeksforgeeks.org/decorators-with-parameters-in-python/#
 https://www.youtube.com/watch?v=MjHpMCIvwsY
 https://stackoverflow.com/questions/39460892/gunicorn-no-module-named-myproject
 https://www.google.com/search?client=firefox-b-1-d&q=decorator+with+arguments
-Interesting
+## Interesting
 https://www.quora.com/How-can-I-use-Command-Prompt-to-check-if-someone-is-hacking-my-computer
 https://simpleprogrammer.com/2016/10/29/ultimate-list-developer-podcasts/
 http://3dgamedevblog.com/wordpress/?p=836
 https://www.google.com/search?q=tensorflow&rlz=1C5CHFA_enUS761US761&oq=tensorflow&aqs=chrome..69i57j0l5.2299j0j7&sourceid=chrome&ie=UTF-8
 https://www.sans.org/
 https://www.google.com/search?rlz=1C1CHBF_enUS887US887&sxsrf=ALeKk01AuOAnTozQXudHoF3A2ZgSKsXxPQ%3A1605681227058&ei=S8C0X5eJA5Hz-gSnqZToAQ&q=OCR+handwriting+ios+apps+libraries&oq=OCR+handwriting+ios+apps+libraries&gs_lcp=CgZwc3ktYWIQAzIHCCEQChCgAToECAAQRzoJCAAQyQMQFhAeOgUIIRCgAToFCCEQqwJQtR1Y_C5g6y9oAHAEeACAAZABiAH-CJIBAzAuOZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab&ved=0ahUKEwjX2qTZvIvtAhWRuZ4KHacUBR0Q4dUDCA0&uact=5
-Generic Tutorials
+## Generic Tutorials
 http://www.codecademy.com/
 http://code.org/
 https://codecombat.com/
@@ -105,50 +120,40 @@ http://typeocaml.com/tag/binary-search-tree
 https://tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf
 https://tldp.org/LDP/abs/abs-guide.pdf
 https://www.freecodecamp.org/learn/
-Online IDE's
+## Online IDE's
 http://cpp.sh/
 http://ideone.com/
 http://www.tutorialspoint.com/codingground.htm
 https://codepen.io/
 https://www.jdoodle.com/
 https://ideone.com/
-Jobs
+## Jobs
 https://hired.com/join/?utm_campaign=%28b2c%29%28l-all%29%28r-swe%29%28q1-17-thechangelog-podcast%29&utm_content=2k-podcast&utm_medium=sponsor&utm_source=changelog
 https://www.freelancer.com/?t=g&utm_expid=294858-307.sd5p7mndRrqTxOshIqkDbg.1&utm_referrer=https%3A%2F%2Fwww.google.com%2F
-Blogs / Magazines
+hirecafe
+## Blogs / Magazines
 http://cacm.acm.org/
 http://cie.acm.org/
 http://elearnmag.acm.org/index.cfm
 http://matt.might.net/articles/
 http://elearnmag.acm.org/index.cfm
 http://matt.might.net/articles/
-Competitive Programming
+## Competitive Programming
 http://www.topcoder.com/
 https://developer.apple.com/watchos/
-Open Source
+## Open Source
 https://opensource.google.com/
 https://github.com/
 https://opensource.google.com/
-Coding Interview
-http://codingntechinterview.blogspot.com/p/java.html
-https://github.com/yangshun/tech-interview-handbook
-https://interviewing.io/?urc=DMCa
-https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems
-http://www.crackingthecodinginterview.com/
-https://github.com/kdn251/interviews
-https://www.geeksforgeeks.org/amazon-interview-preparation/
-PRACTICE PRACTICE PRACTICE
-https://leetcode.com/
-https://www.hackerearth.com/
-https://www.codewars.com/
-Chrisrobles.dev
+
+## Chrisrobles.dev
 https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
 https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-18-04
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04
 https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04
 https://stackoverflow.com/questions/36301100/how-do-i-turn-off-the-mysql-password-validation
 https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu/
-Research
+## Research
 https://www.programiz.com/cpp-programming/structure-pointer
 https://www.tutorialspoint.com/when-to-use-new-operator-in-cplusplus-and-when-it-should-not-be-used
 https://www.cprogramming.com/tutorial/lesson15.html
@@ -157,7 +162,9 @@ https://www.programiz.com/cpp-programming/pointers
 https://en.wiktionary.org/wiki/Manhattan_distance
 https://www.opensourceforu.com/2012/06/beginners-guide-gnu-grep-basics/
 https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_04_02.html
+## Cybersecurity
 
+## Other
 https://www.geeksforgeeks.org/c-plus-plus/
 http://typeocaml.com/tag/binary-search-tree
 https://developer.mozilla.org/en-US/
@@ -283,11 +290,13 @@ https://www.codecademy.com/learn/paths/natural-language-processing
 https://www.codecademy.com/learn/learn-intermediate-python-3-exceptions-and-unit-testing
 https://www.google.com/search?client=firefox-b-1-d&q=cdn+programming
 https://security.stackexchange.com/questions/90077/ssh-key-ed25519-vs-rsa
-
 https://www.geeksforgeeks.org/introduction-to-data-structures/?ref=lbp
 https://www.geeksforgeeks.org/top-data-structures-that-every-programmer-must-know/
 https://career.guru99.com/top-50-data-structure-interview-questions/
 https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/
 https://foobar.withgoogle.com/
-
+https://www.knownhost.com/
+https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories
+https://www.reddit.com/r/linux4noobs/comments/18lzhgj/can_someone_please_guide_me_how_to_use_rsync/
+https://www.awwwards.com/websites/web-interactive/
 

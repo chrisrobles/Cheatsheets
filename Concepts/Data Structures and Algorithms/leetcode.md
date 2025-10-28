@@ -1,18 +1,73 @@
 # Leetcode
 
+Neetcode:
+
+- Static Arrays
+  - [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+  - [27. Remove Element](https://leetcode.com/problems/remove-element/)
+- Dynamic Arrays
+  - [1929. Concatenation of Array](https://neetcode.io/courses/dsa-for-beginners/3)
+- Stacks
+  - [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
+  - [155. Min Stack](https://leetcode.com/problems/min-stack/description/)
+- Singly Linked Lists
+  - [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+  - [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
+- Doubly Linked Lists
+  - [707. Design Linked List](https://leetcode.com/problems/design-linked-list/description/)
+  - [1472. Design Browser History](https://leetcode.com/problems/design-browser-history/description/)
+- Queues
+  - [1700. Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/description/)
+  - [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/)
+- One-Branch Recursion | Factorial
+  - [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+- Two-Branch Recursion | Fibonacci Sequence
+  - [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)
+- Insertion Sort
+- Merge Sort
+  - [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/)
+- Quick Sort
+  - [75. Sort Colors](https://leetcode.com/problems/sort-colors/description/)
+- Bucket Sort
+- Binary Search | Search Array
+  - [704. Binary Search](https://leetcode.com/problems/binary-search/description/)
+  - [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
+- Binary Search | Search Range
+  - [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/description/)
+  - [278. First Bad Version](https://leetcode.com/problems/first-bad-version/description/)
+  - [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/description/)
+- Binary Tree
+- Binary Search Tree
+- BST Insert and Remove
+- Depth-First Search
+- Breadth-First Search
+- BST Sets and Maps
+- Backtracking | Tree Maze
+- Heap / Priority Queue | Heap Properties
+- Heap / Priority Queue | Push and Pop
+- Heap / Priority Queue | Heapify
+- Hashing | Hash Usage
+- Hashing | Hash Implementation
+- Graphs | Intro to Graphs
+- Matrix DFS
+- Matrix BFS
+- Adjacency List
+- 1-Dimension DP
+- 2-Dimension DP
+- Bit Operations
+
 ## Shifting
 
 Start at the beginning of the direction you are shifting
 - Shifting everything to the left? Start at the left side
 - Shifting everything to the right? Start at the right side
 
-## In-place algorithm
+## Two-Pointer / In-place algorithm
 
 Algorithm that doesnt require extra space proportional to the input size.
 
 i.e. dont create another array for storing values, just edit the existing array
 
-**How 2**:
 1) Keep a Left pointer and a Right pointer
 2) Update `R` w/ O(n) loop
    `for R in range(len(myList))`
@@ -29,7 +84,7 @@ If the input is not changing, you can just get the minimum.
 
 ### Dynamic data
 
-Use a minimum state stack. Keep track of the minimum state at every entry of input, so that you dont have to find the minimum every time the data changes.
+Use a minimum state data structure. Keep track of the minimum state at every entry of input, so that you dont have to find the minimum every time the data changes.
 
 ## Combine Linked Lists
 
