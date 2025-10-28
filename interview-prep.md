@@ -162,3 +162,95 @@ def bucketSort(arr):
     return arr
 ```
 ### Search
+
+## Leetcode
+
+### Neetcode's Algorithms and Data Structures for Beginners
+
+- Static Arrays
+  - [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+  - [27. Remove Element](https://leetcode.com/problems/remove-element/)
+- Dynamic Arrays
+  - [1929. Concatenation of Array](https://neetcode.io/courses/dsa-for-beginners/3)
+- Stacks
+  - [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
+  - [155. Min Stack](https://leetcode.com/problems/min-stack/description/)
+- Singly Linked Lists
+  - [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+  - [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
+- Doubly Linked Lists
+  - [707. Design Linked List](https://leetcode.com/problems/design-linked-list/description/)
+  - [1472. Design Browser History](https://leetcode.com/problems/design-browser-history/description/)
+- Queues
+  - [1700. Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/description/)
+  - [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/)
+- One-Branch Recursion | Factorial
+  - [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+- Two-Branch Recursion | Fibonacci Sequence
+  - [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)
+- Insertion Sort
+- Merge Sort
+  - [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/)
+- Quick Sort
+  - [75. Sort Colors](https://leetcode.com/problems/sort-colors/description/)
+- Bucket Sort
+- Binary Search | Search Array
+  - [704. Binary Search](https://leetcode.com/problems/binary-search/description/)
+  - [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
+- Binary Search | Search Range
+  - [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/description/)
+  - [278. First Bad Version](https://leetcode.com/problems/first-bad-version/description/)
+  - [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/description/)
+- Binary Tree
+- Binary Search Tree
+  - [700. Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/description/)
+- BST Insert and Remove
+  - [701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/description/)
+  - [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/description/)
+- Depth-First Search
+  - [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
+  - [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
+  - [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/)
+- Breadth-First Search
+  - [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/)
+  - [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/description/)
+- BST Sets and Maps
+- Backtracking | Tree Maze
+  - [112. Path Sum](https://leetcode.com/problems/path-sum/description/)
+  - [78. Subsets](https://leetcode.com/problems/subsets/description/)
+  - [39. Combination Sum](https://leetcode.com/problems/combination-sum/description/)
+- Heap / Priority Queue | Heap Properties
+- Heap / Priority Queue | Push and Pop
+  - [703. Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/description/)
+- Heap / Priority Queue | Heapify
+  - [1046. Last Stone Weight](https://leetcode.com/problems/last-stone-weight/description/)
+  - [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/description/)
+  - [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
+- Hashing | Hash Usage
+  - [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)
+  - [1. Two Sum](https://leetcode.com/problems/two-sum/description/)
+  - [146. LRU Cache](https://leetcode.com/problems/lru-cache/description/)
+- Hashing | Hash Implementation
+- Graphs | Intro to Graphs
+- Matrix DFS
+  - [200. Number of Islands](https://leetcode.com/problems/number-of-islands/description/)
+  - [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/)
+- Matrix BFS
+  - [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/)
+  - [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description/)
+- Adjacency List
+  - [133. Clone Graph](https://leetcode.com/problems/clone-graph/description/)
+  - [207. Course Schedule](https://leetcode.com/problems/course-schedule/description/)
+- 1-Dimension DP
+  - [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)
+  - [198. House Robber](https://leetcode.com/problems/house-robber/description/)
+- 2-Dimension DP
+  - [62. Unique Paths](https://leetcode.com/problems/unique-paths/description/)
+  - [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/description/)
+  - [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/description/)
+- Bit Operations
+  - [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/description/)
+  - [338. Counting Bits](https://leetcode.com/problems/counting-bits/description/)
+  - [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/description/)
+
+
