@@ -144,6 +144,7 @@ Bucket Sort
 2. First pass through array and update count of each value
 3. Second pass through array and sort values
 Use for: know range of values
+"""
 def bucketSort(arr):
     # Assuming arr only contains 0, 1 or 2
     counts = [0, 0, 0]
@@ -159,7 +160,5 @@ def bucketSort(arr):
             arr[i] = n
             i += 1
     return arr
-
-"""
 ```
 ### Search
