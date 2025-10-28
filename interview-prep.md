@@ -161,7 +161,6 @@ def bucketSort(arr):
             i += 1
     return arr
 ```
-### Search
 
 ## Leetcode
 
