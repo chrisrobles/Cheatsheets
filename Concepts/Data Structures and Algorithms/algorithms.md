@@ -8,7 +8,7 @@
 
 ### Time Complexity
 
-The time of execution
+The time of execution in relation to input size
 
 #### Ranking
 
@@ -18,7 +18,7 @@ The time of execution
 | O(logn) |  |
 | O(n) | Think linear, grows the same as the input grows |
 | O(nlogn) |  |
-| O(n^2) | Think of a square, for every n you have a n |
+| O(n^2) | Think of a square, for every n you have n |
 | O(a^n) | Think of binary tree 2^n where a node is given 2 options n times |
 | O(n!) | Think exponential |
 --WORST--
@@ -109,7 +109,7 @@ Visualize
 
 ### Notations
 
-O, Ω (Amortized) and Θ have nothing to do with worst, best and average case of algorithms. 
+O, Ω and Θ have nothing to do with worst, best, and average case of algorithms. 
 
 - Big O (O): Describes an upper bound on the time complexity
 - Big Omega (Ω): Describes a lower bound on the time complexity
@@ -119,13 +119,14 @@ All three give us a way to express statements about the rate of growth of functi
 
 For example, you can have a lower bound (Omega) on the worst-case time complexity of an algorithm. "The function that describes the worst-case behavior of this algorithm grows **at least** as quickly as the function O(n^2)".
 
-#### Ω | Amortized
+#### Amortized
 
 Average time per operation
 - Used to ensure the average performance is acceptable, even if some individual operations might take longer
 
 ### Space Complexity
 
+Growth of the application's memory usage in relation to the input size
 *Not as relevant as time complexity* 
 
 #### Calculate
@@ -190,7 +191,7 @@ Examples:
 
 O(n) space and complexity
 
-- The equivalent loop would just be O(n) space complexity and not O(n) space complexity
+- The equivalent loop would just be O(1) space complexity and not O(n) time complexity
 
 The O(n) space complexity comes from the method calls getting put into the call stack and if there are n method calls there are n methods in the call stack
 
